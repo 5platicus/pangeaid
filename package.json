@@ -1,0 +1,19 @@
+{
+  "name": "psd2html-boilerplate",
+  "description": "Gulp + Ejs + Less + js + LiveReload + Bower",
+  "version": "1.2.2",
+  "license": "MIT",
+  "repository": "avevlad/psd2html-boilerplate",
+  "author": {
+    "name": "Vladislav Derjavin",
+    "email": "dev@vld.me",
+    "url": "http://vld.me"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-ejs": "^1.2.2",
+    "gulp-less": "^3.0.5",
+    "gulp-util": "^3.0.7"
+  }
+}
