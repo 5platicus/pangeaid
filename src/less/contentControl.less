@@ -1,0 +1,57 @@
+.contentControl {
+    display:flex;
+}
+
+.search {
+    width:65%;
+}
+
+
+.search input{
+    width:100%;
+    background:none;
+    border:none;
+    border-bottom:1px solid #175A85;
+    caret-color: white;
+    color:white;
+}
+
+input::placeholder {
+    font-size: 0.8em;
+    color:rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    border:none;
+}
+
+input::placeholder:before{
+    font-family: "Font Awesome 5 Pro"; 
+    font-weight: 100; 
+    content: "\f00e"; 
+    color:rgba(255,255,255,0.3);
+    font-size:0.8em;
+}
+
+
+select, input:focus {
+    outline:none;
+}
+
+.sortBy {
+    width:35%;
+    margin-left:10px;
+}
+
+.sortBy select {
+    font-family:'IBM Plex Sans';
+    font-size: 0.8em;
+    width:100%;
+    color:rgba(255,255,255,0.5);
+    background:none;
+    border:none;
+    border-bottom:1px solid #175A85;
+}
+
+.sortBy select:focus {
+    background:rgba(16,33,82,1);
+    outline:none;
+}

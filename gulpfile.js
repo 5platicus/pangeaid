@@ -22,7 +22,7 @@ gulp.task('ejs', function () {
 });
 
 gulp.task('less', function () {
-  return gulp.src('./src/less/**/*.less')
+  return gulp.src('./src/less/main.less')
     .pipe(gulpLess())
     .pipe(gulp.dest('./public/css/'))
     .pipe(gulpConnect.reload());

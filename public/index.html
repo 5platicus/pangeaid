@@ -1,0 +1,569 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>PangeaID</title>
+</head>
+<body>
+
+<div class="masterWrapper">
+    <header class="header">
+    <ul>
+        <li>
+            <i class="fal fa-landmark"></i>
+        </li>
+        <li><h3>My Gov</h3></li>
+        <li><img src="images/Logo Icon.png" alt=""></li>
+    </ul>
+</header>
+    <div id="gov" class="wrapper">
+    <div class="contentControl">
+        <div class="search">
+            <input type="text" placeholder="&#xF002; Search" style="font-family: IBM Plex Sans, 'Font Awesome 5 Pro'" />
+        </div>
+        <div class="sortBy">
+            <select>
+                <option>SORT BY</option>
+                <option>Name</option>
+                <option>Date</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="outerContainer">
+        <div class="innerContainer">
+            <ul class="content">
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-envelope"></i></li>
+                        <li class="contentMessage"><span class="subject">Your Application Has Been Approved!</span><br><span class="message">Dear Mr. Mbuku, Your application on form S-342 has been approved by your local government.</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-envelope-open"></i></li>
+                        <li class="contentMessage"><span class="subject">Your Application Has Been Denied.</span><br><span class="message">Dear Mr. Mbuku, We regret to inform you that your application on form S-342 has been denied.</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-file-contract"></i></li>
+                        <li class="contentMessage"><span class="subject">Form 223F</span><br><span class="message">Filled on Jan 25 2019</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-file-contract"></i></li>
+                        <li class="contentMessage"><span class="subject">Form S-3421</span><br><span class="message">Filled on Jan 11 2019.</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-star-exclamation"></i></li>
+                        <li class="contentMessage"><span class="subject">General Notice</span><br><span class="message">A nationwide notice has been issued following the events of September 30th 2018</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-file-contract"></i></li>
+                        <li class="contentMessage"><span class="subject">Form A-36641</span><br><span class="message">Filled on Jan 7 2019</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-envelope-open"></i></li>
+                        <li class="contentMessage"><span class="subject">Your Application Has Been Approved!</span><br><span class="message">Dear Mr. Mbuku, Your application on form A-322 has been approved by your local government.</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-envelope-open"></i></li>
+                        <li class="contentMessage"><span class="subject">Your Application Has Been Denied.</span><br><span class="message">Dear Mr. Mbuku, We regret to inform you that your application on form A-322 has been denied.</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-file-contract"></i></li>
+                        <li class="contentMessage"><span class="subject">Your Application Has Been Denied.</span><br><span class="message">Dear Mr. Mbuku, We regret to inform you that your application on form S-342 has been denied.</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-file-contract"></i></li>
+                        <li class="contentMessage"><span class="subject">Form A-36641</span><br><span class="message">Filled on Jan 7 2019</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-file-contract"></i></li>
+                        <li class="contentMessage"><span class="subject">Form A-36641</span><br><span class="message">Filled on Jan 7 2019</span></li>  
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-envelope-open"></i></li>
+                        <li class="contentMessage"><span class="subject">Your Application Has Been Approved!</span><br><span class="message">Dear Mr. Mbuku, Your application on form S-342 has been approved by your local government.</span></li>
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-file-contract"></i></li>
+                        <li class="contentMessage"><span class="subject">Form A-332</span><br><span class="message">Filled on Jan 2 2019</span></li>  
+                    </ul>
+                </li>
+                <li>          
+                    <ul class="contentLine">
+                        <li class="contentIcon"><i class="fal fa-file-contract"></i></li>
+                        <li class="contentMessage"><span class="subject">Form A-341</span><br><span class="message">Filled on Jan 3 2019</span></li>  
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="containerAction" id="govFormEmpty" href="#animatedModal">
+        <i class="fal fa-layer-plus"></i><h4>New Application</h4>
+    </div>
+</div>
+
+    <div id="animatedModal">
+    <div class="modalHeader">
+        <div>
+                <i class="fal fa-file-contract"></i>
+            <span class="modalTitle">FORM 223F</span>
+        </div>
+        <i class="close-animatedModal fal fa-times-circle"></i>
+    </div>
+    <div class="formTitle">
+        <h4>STANDARD VISA APPLICATION FORM</h4>    
+    </div>
+    <div class="modalContent">
+        
+        <div class="profilePic">
+            Upload Photo
+            <!-- <img src="assets/images/profilePic.png" alt="Miora Rakotomalala"> -->
+        </div> 
+
+        <button>Paste Profile</button>
+
+        <div class="generalForm">  
+            <form class="" action="">
+                <div class="formSectionTitle">
+                    <h4>1. Applicant Details</h4>
+                </div>  
+                <label class="formLabel">
+                    <h4>Surname</h4>
+                </label>
+                <input type="text">
+                <label class="formLabel">
+                    <h4>First Name</h4>
+                </label>
+                <input type="text">
+                <label class="formLabel">
+                    <h4>Birth Date</h4>
+                </label>
+                <input type="date">
+                <label class="formLabel">
+                    <h4>Birth Place</h4>
+                </label>
+                <input type="text">
+                <label class="formLabel">
+                    <h4>Nationality</h4>
+                </label>
+                <input type="text">
+
+                <div class="formSectionTitle">
+                    <h4>2. Contact References (NOT IN MADAGASCAR)</h4>
+                </div>  
+                <label class="formLabel">
+                    <h4>Telephone Number</h4>
+                </label>
+                <input type="number">
+                <label class="formLabel">
+                    <h4>Fax Number</h4>
+                </label>
+                <input type="text">
+                <label class="formLabel">
+                    <h4>Email Address</h4>
+                </label>
+                <input type="email">
+                <label class="formLabel">
+                    <h4>Physical Address</h4>
+                </label>
+                <input type="text">
+                <label class="formLabel">
+                    <h4>Physicall Address 2</h4>
+                </label>
+                <input type="text">
+
+                <div class="formSectionTitle">
+                    <h4>3. Passport Details</h4>
+                </div>  
+                <label class="formLabel">
+                    <h4>Passport Number</h4>
+                </label>
+                <input type="number">
+                <label class="formLabel">
+                    <h4>Date Issued</h4>
+                </label>
+                <input type="date">
+                <label class="formLabel">
+                    <h4>Place Issued</h4>
+                </label>
+                <input type="text">
+                <label class="formLabel">
+                    <h4>Valid Until</h4>
+                </label>
+                <input type="date">
+                <label class="formLabel">
+                    <h4>Issuing Authority</h4>
+                </label>
+                <input type="text">
+
+                <div class="formSectionTitle">
+                    <h4>4. Visit Details</h4>
+                </div>  
+
+                <label class="formLabel" style="text-align:center;">
+                    <h4>Validity Period</h4>
+                </label>
+                <div class="formMultiSelect">
+                    <label>
+                        <input type="radio" name="optradio" checked>1 Week
+                    </label>
+                    <label>
+                        <input type="radio" name="optradio">15 Days
+                    </label>
+                    <label>
+                        <input type="radio" name="optradio">1 Month
+                    </label>
+                    <label>
+                        <input type="radio" name="optradio">3 Months
+                    </label>
+                </div>
+
+                <label class="formLabel" style="text-align:center;">
+                    <h4>Re-entry</h4>
+                </label>
+                <div class="formMultiSelect"> 
+                    <label>
+                        <input type="radio" name="optradio2" checked>Single
+                    </label>
+                    <label>
+                        <input type="radio" name="optradio2">Multiple
+                    </label>
+                </div>
+
+                <label class="formLabel" style="text-align:center;">
+                    <h4>Single Traveler</h4>
+                </label>
+                <div class="formMultiSelect"> 
+                    <label>
+                        <input type="radio" name="optradio3" checked>Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="optradio3">No
+                    </label>
+                </div>
+                
+                <div class="formSectionTitle">
+                    <h4>5. Visit Purpose: Tourism</h4>
+                </div>  
+                <label class="formLabel">
+                    <h4>Applicant professional activity sector</h4>
+                </label>
+                <input type="text">
+
+                <label class="formLabel">
+                    <h4>Intended Destinations</h4>
+                </label>
+                <div class="formMultiLineInput">
+                    <input style="flex:8" type="text" placeholder="Destination Name">
+                    <label class="formLabel">
+                        <h4>Days</h4>
+                    </label>
+                    <input style="flex:1; margin-left:5px;" type="number">
+                </div>
+                <div class="formMultiLineInput">
+                    <input style="flex:8" type="text" placeholder="Destination Name">
+                    <label class="formLabel">
+                        <h4>Days</h4>
+                    </label>
+                    <input style="flex:1; margin-left:5px;" type="number">
+                </div>
+                <div class="formMultiLineInput">
+                    <input style="flex:8" type="text" placeholder="Destination Name">
+                    <label class="formLabel">
+                        <h4>Days</h4>
+                    </label>
+                    <input style="flex:1; margin-left:5px;" type="number">
+                </div>
+                <div class="formMultiLineInput">
+                    <input style="flex:8" type="text" placeholder="Destination Name">
+                    <label class="formLabel">
+                        <h4>Days</h4>
+                    </label>
+                    <input style="flex:1; margin-left:5px;" type="number">
+                </div>
+                <div class="formMultiLineInput">
+                    <input style="flex:8" type="text" placeholder="Destination Name">
+                    <label class="formLabel">
+                        <h4>Days</h4>
+                    </label>
+                    <input style="flex:1; margin-left:5px;" type="number">
+                </div>
+
+                <div class="formSectionTitle">
+                    <h4>6. Visit Purpose: Emigration</h4>
+                </div>
+                <label class="formLabel">
+                    <h4>Activity sector in which employment is searched</h4>
+                </label>
+                <input type="text">
+                <label class="formLabel">
+                    <h4>Contact address</h4>
+                </label>
+                <input type="text">
+
+                <div class="formSectionTitle">
+                    <h4>7. Visit Purpose: Other than tourism or emigration</h4>
+                </div>
+                <label class="formLabel">
+                    <h4>Intention description</h4>
+                </label>
+                <input type="text">
+                <label class="formLabel">
+                    <h4>Contact address</h4>
+                </label>
+                <input type="text">
+                <label class="formLabel">
+                    <h4>Permit reference number</h4>
+                </label>
+                <input type="text">
+
+                <div class="formSectionTitle">
+                    <h4>8. Confirmation & Signature</h4>
+                </div>
+                <label class="formLabel">
+                    <h4>Full Name</h4>
+                </label>
+                <input type="text">
+                <button>Digitally Sign Form</button>
+            </form>
+        </div>
+    </div>
+</div>
+    
+    
+    <div id="docs" class="wrapper">
+    <div class="contentControl">
+        <div class="search">
+            <input type="text" placeholder="&#xF002; Search" style="font-family: IBM Plex Sans, 'Font Awesome 5 Pro'" />
+        </div>
+        <div class="sortBy">
+            <select>
+                <option>SORT BY</option>
+                <option>Name</option>
+                <option>Date</option>
+            </select>
+        </div>
+    </div>
+    <div class="outerContainer">
+        <div class="innerContainer">
+            <ul class="content">
+                <div class="docsContainer">
+                    <div class="docstitle">
+                        <h3>Driver's License</h3>
+                    </div>
+                    <div class="docsContentWrapper">
+                        <div class="docsContent">
+                            <img src="images/exampleLicense.png" alt="">
+                        </div>
+                    </div>
+                    <ul class="docsMenu">
+                        <li><i class="fal fa-qrcode"></i><h4>Show Code</h4></li>
+                        <li><i class="fal fa-share-square"></i><h4>Share ID</h4></li>
+                        <li id="trash"><i class="fal fa-trash-alt" style="color:#ED2631;"></i></li>
+                    </ul>
+                </div>
+
+                <div class="docsContainer">
+                    <div class="docstitle">
+                        <h3>Marriage License</h3>
+                    </div>
+                    <div class="docsContentWrapper">
+                        <div class="docsContent">
+                            <img src="images/marriageLicense.jpg" alt="">
+                        </div>
+                    </div>
+                    <ul class="docsMenu">
+                        <li><i class="fal fa-qrcode"></i><h4>Show Code</h4></li>
+                        <li><i class="fal fa-share-square"></i><h4>Share ID</h4></li>
+                        <li id="trash"><i class="fal fa-trash-alt" style="color:#ED2631;"></i></li>
+                    </ul>
+                </div>
+
+                <div class="docsContainer">
+                    <div class="docstitle">
+                        <h3>Insurance Certificate</h3>
+                    </div>
+                    <div class="docsContentWrapper">
+                        <div class="docsContent">
+                            <img src="images/insuranceCertificate.jpg" alt="">
+                        </div>
+                    </div>
+                    <ul class="docsMenu">
+                        <li><i class="fal fa-qrcode"></i><h4>Show Code</h4></li>
+                        <li><i class="fal fa-share-square"></i><h4>Share ID</h4></li>
+                        <li id="trash"><i class="fal fa-trash-alt" style="color:#ED2631;"></i></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="containerAction">
+        <i class="fal fa-folder-plus"></i><h4>Add Document</h4>
+    </div>
+</div>
+    <div id="wallet" class="wrapper">
+    <div class="contentControl">
+        <div class="search">
+            <input type="text" placeholder="&#xF002; Search" style="font-family: IBM Plex Sans, 'Font Awesome 5 Pro'" />
+        </div>
+        <div class="sortBy">
+            <select>
+                <option>SORT BY</option>
+                <option>Name</option>
+                <option>Date</option>
+            </select>
+        </div>
+    </div>
+    <div class="outerContainer">
+            <div class="innerContainer">
+                <ul class="content">
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-chevron-square-left"></i></li>
+                            <li class="contentMessage"><span class="subject">Received $323.43 from Amare Daknji</span><br><span class="message">On April 24 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-file-invoice-dollar"></i></li>
+                            <li class="contentMessage"><span class="subject">Paid $32.00 to AR Electric Company</span><br><span class="message">On April 23 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-chevron-square-right"></i></li>
+                            <li class="contentMessage"><span class="subject">Sent $24.32 to Ezmund Kwat</span><br><span class="message">On April 21 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-chevron-square-right"></i></li>
+                            <li class="contentMessage"><span class="subject">Sent $112.55 to Dakwali Jumbeh</span><br><span class="message">On April 20 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-file-invoice-dollar"></i></li>
+                            <li class="contentMessage"><span class="subject">Paid $10.00 to Madagascar Gas</span><br><span class="message">On April 13 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-file-invoice-dollar"></i></li>
+                            <li class="contentMessage"><span class="subject">Paid $52.00 to AR Electric Company</span><br><span class="message">On April 12 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-chevron-square-left"></i></li>
+                            <li class="contentMessage"><span class="subject">Received $440.00 from Daliah Mkambi</span><br><span class="message">On April 10 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-chevron-square-right"></i></li>
+                            <li class="contentMessage"><span class="subject">Sent $112.55 to Dakwali Jumbeh</span><br><span class="message">On April 8 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-chevron-square-left"></i></li>
+                            <li class="contentMessage"><span class="subject">Received $340.00 from Daliah Mkambi</span><br><span class="message">On April 4 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-file-invoice-dollar"></i></li>
+                            <li class="contentMessage"><span class="subject">Paid $15.00 to Madagascar Gas</span><br><span class="message">On March 31 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-file-invoice-dollar"></i></li>
+                            <li class="contentMessage"><span class="subject">Paid $10.00 to Madagascar Gas</span><br><span class="message">On March 28 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-chevron-square-left"></i></li>
+                            <li class="contentMessage"><span class="subject">Received $440.00 from Daliah Mkambi</span><br><span class="message">On March 22 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-chevron-square-left"></i></li>
+                            <li class="contentMessage"><span class="subject">Received $140.00 from Daliah Mkambi</span><br><span class="message">On March 21 2019</span></li>
+                        </ul>
+                    </li>
+                    <li>          
+                        <ul class="contentLine">
+                            <li class="contentIcon"><i class="fal fa-chevron-square-left"></i></li>
+                            <li class="contentMessage"><span class="subject">Received $320.00 from Daliah Mkambi</span><br><span class="message">On March 20 2019</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div class="containerAction" id="govFormEmpty" href="#animatedModal">
+        <i class="fal fa-envelope-open-dollar"></i></i><h4>New Transaction</h4>
+    </div>
+</div> 
+    <ul class="nav">
+    <li class="current" id="govLink">
+        <a href="#">
+            <i class="fal fa-landmark"></i>
+            <h4>My Gov</h4>
+        </a>
+    </li>
+    <li id="docsLink" style="border-left:1px #175A85 solid;">
+        <a href="#">
+            <i class="fal fa-id-card"></i>
+            <h4>My Docs</h4>
+        </a>
+    </li>
+    <li id="walletLink" style="border-left:1px #175A85 solid;">
+        <a href="#">
+            <i class="fal fa-wallet" ></i>
+            <h4>My Wallet</h4>
+        </a>
+    </li>
+</ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/animatedModal.js"></script>
+<script src="js/Main.js"></script>
+<script>
+    $("#govFormEmpty").animatedModal();
+</script>
+</body>
+</html>
