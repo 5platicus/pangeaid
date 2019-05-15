@@ -1,4 +1,4 @@
-#animatedModal {
+.animatedModal {
     display: flex;
     flex-direction: column;
     border-top-left-radius:15px;
@@ -19,4 +19,25 @@
 .modalHeader {
     display:flex;
     justify-content: space-between;
+}
+
+.applicationCategories {
+    z-index: 10000;
+    height: 100%;
+    overflow: scroll;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(0);
+    &.visible {
+        transform: translateX(0);
+    }
+}
+.visaApplication {
+    z-index: 10000;
+    height: 100%;
+    overflow: scroll;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(5px);
+    &.visible {
+        transform: translateX(50px);
+    }
 }

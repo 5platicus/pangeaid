@@ -1,33 +1,27 @@
-let govLink = $("#govLink");
-let gov = $("#gov");
-let docsLink = $("#docsLink");
-let docs = $("#docs");
-let walletLink = $("#walletLink");
-let wallet = $("#wallet");
+let availableTabs = {
+    govLink: '#gov',
+    docsLink: '#docs',
+    walletLink: '#wallet',
+};
 
-govLink.click(function() {
-    gov.css('display', 'inline-flex');
-    docs.hide();
-    wallet.hide();
-    govLink.addClass("current");
-    docsLink.removeClass("current");
-    walletLink.removeClass("current");
+$(".tabLink").on('click', function() {
+    let tab = $(this).data("id");
+    $(".tabLink").removeClass("current");
+    $(this).addClass("current");
+    
+    jQuery.each(availableTabs, function(key, val) {
+        if (val === tab) {
+            $(val).show();
+            $(val).css('display', 'inline-flex');
+        } else {
+            $(val).hide();
+        }
+    });
 });
 
-docsLink.click(function() {
-    gov.hide();
-    docs.css('display', 'inline-flex');
-    wallet.hide();
-    govLink.removeClass("current");
-    docsLink.addClass("current");
-    walletLink.removeClass("current");
-});
 
-walletLink.click(function() {
-    gov.hide();
-    docs.hide();
-    wallet.css('display', 'inline-flex');
-    govLink.removeClass("current");
-    docsLink.removeClass("current");
-    walletLink.addClass("current");
-});
+
+$('.navigationLink').on('click', function() {
+    let link = $(this).data("id");
+    $('.' + link).addClass('visible');
+})

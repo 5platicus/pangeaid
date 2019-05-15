@@ -2,8 +2,13 @@ var gulp = require('gulp');
 var gulpConnect = require('gulp-connect');
 var gulpLess = require('gulp-less');
 var gulpEjs = require('gulp-ejs');
-var src = 'src';
+var uglify = require('gulp-uglify');
+var cssnano = require('gulp-cssnano');
+var htmlmin = require('gulp-htmlmin');
+var gulpif = require('gulp-if');
+var autoprefixer = require('gulp-autoprefixer');
 
+var src = 'src';
 var out = 'public';
 
 gulp.task("connect", function () {
@@ -24,6 +29,8 @@ gulp.task('ejs', function () {
 gulp.task('less', function () {
   return gulp.src('./src/less/main.less')
     .pipe(gulpLess())
+    .pipe(autoprefixer())
+    .pipe(gulpif("*.css", cssnano()))
     .pipe(gulp.dest('./public/css/'))
     .pipe(gulpConnect.reload());
 });
