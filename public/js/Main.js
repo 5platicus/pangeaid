@@ -18,10 +18,3 @@ $(".tabLink").on('click', function() {
         }
     });
 });
-
-
-
-$('.navigationLink').on('click', function() {
-    let link = $(this).data("id");
-    $('.' + link).addClass('visible');
-})
