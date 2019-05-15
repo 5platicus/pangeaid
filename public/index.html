@@ -333,7 +333,7 @@
     <div id="applicationCategories" class="animatedModal">
     <div class="modalHeader">
         <div>
-                <i class="fal fa-file-contract"></i>
+            <i class="fal fa-file-contract"></i>
             <span class="modalTitle">New Application</span>
         </div>
         <i class="close-applicationCategories fal fa-times-circle"></i>
@@ -344,7 +344,7 @@
     <ul class="categorySelect">
         <li><i class="fal fa-heartbeat"></i><h3>HealthCare</h3></li>
         <li id="travelCategoryFormEmpty" href="#travelCategory"><i class="fal fa-plane-alt"></i><h3>Travel</h3></li>
-        <li id="visaApplicationFormEmpty" href="#visaApplication"><i class="fal fa-car"></i><h3>Driving</h3></li>
+        <li><i class="fal fa-car"></i><h3>Driving</h3></li>
         <li><i class="fal fa-rings-wedding"></i><h3>Marriage</h3></li>
         <li><i class="fal fa-suitcase-rolling"></i><h3>Immigration</h3></li>
         <li><i class="fal fa-paw"></i><h3>Animals</h3></li>
@@ -354,6 +354,7 @@
 </div>
     <div id="travelCategory" class="animatedModal travelCategory">
     <div class="modalHeader">
+        <i class="close-travelCategory fal fa-chevron-left"></i>
         <div>
             <i class="fal fa-file-contract"></i>
             <span class="modalTitle">Travel Category</span>
@@ -363,11 +364,15 @@
     <div class="formTitle">
         <h4>Travel Category</h4>    
     </div>
+    <div class="containerAction" id="visaApplicationFormEmpty" href="#visaApplication">
+        <i class="fal fa-layer-plus"></i><h4>New Application</h4>
+    </div>
 </div>
     <div id="visaApplication" class="animatedModal visaApplication">
     <div class="modalHeader">
+        <i class="close-travelCategory fal fa-chevron-left"></i>
         <div>
-                <i class="fal fa-file-contract"></i>
+            <i class="fal fa-file-contract"></i>
             <span class="modalTitle">FORM 223F</span>
         </div>
         <i class="close-visaApplication fal fa-times-circle"></i>
