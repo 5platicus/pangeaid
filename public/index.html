@@ -383,12 +383,11 @@
     </div>
     <div class="modalContent">
         
-        <div class="profilePic">
+        <div class="profilePic" data-profile="profilePic">
             Upload Photo
-            <!-- <img src="assets/images/profilePic.png" alt="Miora Rakotomalala"> -->
         </div> 
 
-        <button>Paste Profile</button>
+        <button id="pasteProfile">Paste Profile</button>
 
         <div class="generalForm">  
             <form class="" action="">
@@ -398,23 +397,23 @@
                 <label class="formLabel">
                     <h4>Surname</h4>
                 </label>
-                <input type="text">
+                <input type="text" data-profile="surname" />
                 <label class="formLabel">
                     <h4>First Name</h4>
                 </label>
-                <input type="text">
+                <input type="text" data-profile="firstName">
                 <label class="formLabel">
                     <h4>Birth Date</h4>
                 </label>
-                <input type="date">
+                <input type="date" data-profile="birthDate">
                 <label class="formLabel">
                     <h4>Birth Place</h4>
                 </label>
-                <input type="text">
+                <input type="text" data-profile="birthPlace">
                 <label class="formLabel">
                     <h4>Nationality</h4>
                 </label>
-                <input type="text">
+                <input type="text" data-profile="nationality">
 
                 <div class="formSectionTitle">
                     <h4>2. Contact References (NOT IN MADAGASCAR)</h4>
@@ -446,23 +445,23 @@
                 <label class="formLabel">
                     <h4>Passport Number</h4>
                 </label>
-                <input type="number">
+                <input type="text" data-profile="passportNumber" />
                 <label class="formLabel">
                     <h4>Date Issued</h4>
                 </label>
-                <input type="date">
+                <input type="date" data-profile="dateIssued" />
                 <label class="formLabel">
                     <h4>Place Issued</h4>
                 </label>
-                <input type="text">
+                <input type="text" data-profile="placeIssued" />
                 <label class="formLabel">
                     <h4>Valid Until</h4>
                 </label>
-                <input type="date">
+                <input type="date" data-profile="validUntil" />
                 <label class="formLabel">
                     <h4>Issuing Authority</h4>
                 </label>
-                <input type="text">
+                <input type="text" data-profile="issuingAuthority" />
 
                 <div class="formSectionTitle">
                     <h4>4. Visit Details</h4>
@@ -592,9 +591,41 @@
                     <h4>Full Name</h4>
                 </label>
                 <input type="text">
-                <button>Digitally Sign Form</button>
+                <button id="prePaymentEmptyForm" href="#prePayment">Digitally Sign Form</button>
             </form>
         </div>
+    </div>
+</div>
+    <div id="prePayment" class="animatedModal travelCategory">
+    <div class="modalHeader">
+        <i class="close-prePayment fal fa-chevron-left"></i>
+        <div>
+            <i class="fal fa-file-contract"></i>
+            <span class="modalTitle">Pre Payment</span>
+        </div>
+        <i class="close-prePayment close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
+    </div>
+    <div class="formTitle">
+        <h4>Pre Payment</h4>    
+    </div>
+    <div class="containerAction" id="paymentValidationEmptyForm" href="#paymentValidation">
+        <i class="fal fa-layer-plus"></i><h4>New Application</h4>
+    </div>
+</div>
+    <div id="paymentValidation" class="animatedModal travelCategory">
+    <div class="modalHeader">
+        <i class="close-paymentValidation fal fa-chevron-left"></i>
+        <div>
+            <i class="fal fa-file-contract"></i>
+            <span class="modalTitle">Payment Validation</span>
+        </div>
+        <i class="close-pa close-paymentValidation close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
+    </div>
+    <div class="formTitle">
+        <h4>Payment Validation</h4>    
+    </div>
+    <div class="containerAction" id="visaApplicationFormEmpty" href="#visaApplication">
+        <i class="fal fa-layer-plus"></i><h4>New Application</h4>
     </div>
 </div>
 
@@ -631,6 +662,8 @@
     $("#govFormEmpty").animatedModal();
     $("#travelCategoryFormEmpty").animatedModal();
     $("#visaApplicationFormEmpty").animatedModal();
+    $("#prePaymentEmptyForm").animatedModal();
+    $("#paymentValidationEmptyForm").animatedModal();
 
     $("#docsFormEmpty").animatedModal();
     $("#walletFormEmpty").animatedModal();
