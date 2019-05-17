@@ -1,22 +1,22 @@
 .categorySelect {
     display:flex;
     flex-wrap: wrap;
+    height:inherit;
 }
 
 .categorySelect li {
-    flex: 1 0 41%;
-    width:40vw;
-    min-height:40vw;
+    flex: 1 0 31%;
     margin:5px;
     text-align:center;
     border:1px dashed white;
     display:flex;
     justify-content: center;
     flex-direction: column;
+    padding:20px;
 }
 
 .categorySelect li i {
-    color:#09B297;
+    color:@lightGreen;
     font-size:15vw;
     margin-bottom:10px;
 }
@@ -36,7 +36,7 @@
     background: linear-gradient(90deg, rgba(24,49,107,1) 0%, rgba(33,57,132,1) 100%);
     border-radius: 10px;
     box-shadow:0 14px 20px rgb(17, 29, 82);
-    border:1px solid #175A85;
+    border:1px solid @lightBlue;
     padding:20px;
     z-index:2;
     text-align: center;
@@ -45,4 +45,19 @@
     margin:5px 0;
     font-size:0.7em;
 }
+
+@media screen and (max-height:380px){
+    .verticalFlexFilled {
+        height:auto !important;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .categorySelect li i {
+       font-size: 50px !important;
+    }
+    .categorySelect li h3 {
+        font-size: 18px !important;
+     }
+  }
 

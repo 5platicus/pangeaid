@@ -1,4 +1,4 @@
-<div id="prePayment" class="animatedModal travelCategory">
+<div id="prePayment" class="animatedModal prePayment">
     <div class="modalHeader">
         <i class="close-prePayment fal fa-chevron-left"></i>
         <div>
@@ -8,9 +8,33 @@
         <i class="close-prePayment close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
     </div>
     <div class="formTitle">
-        <h4>Pre Payment</h4>    
+        <h4>Please validate your identity</h4>    
     </div>
-    <div class="containerAction" id="paymentValidationEmptyForm" href="#paymentValidation">
-        <i class="fal fa-layer-plus"></i><h4>New Application</h4>
+    <div class="verticalFlexFilled">
+        <div class="verticalFlexFilled content">
+            <h3>Visa Application Form</h3>
+            <ul class="radioList verticalFlexFilled" style="justify-content: space-around;">
+                <li>
+                    <input type="radio" name="paymentType" id="pT1" checked>
+                    <label for="pT1">Wallet (Balance: $214.23)</label>
+                </li>
+                <li>
+                    <input type="radio" name="paymentType" id="pT2">
+                    <label for="pT2">Credit Card</label>
+                </li>
+                <li>
+                    <input type="radio" name="paymentType" id="pT3">
+                    <label for="pT3">Bank Transfer</label>
+                </li>
+            </ul>
+            <h3 style="margin-left:auto;">$18.00</h3>
+        </div>
+        <ul class="categorySelect">
+            <li><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+            <li><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+        </ul>
+        <div class="containerAction" id="paymentValidationEmptyForm" href="#paymentValidation" style="margin-top:10px; background:grey">
+            <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
+        </div>
     </div>
 </div>
