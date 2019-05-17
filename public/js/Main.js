@@ -9,7 +9,7 @@ function fingerprint(sResult) {
         button.removeClass('disabledAction');
         button.addClass('enabledAction');
     } else {
-        button.removeCalass('enabledAction');
+        button.removeClass('enabledAction');
         button.addClass('falseAction');
     }
 }
@@ -22,7 +22,7 @@ function p_fingerprint() {
  * functions for face recognition
  * in p_fingerprint comment how to enable it for android hook
 */
-function faceRecognition(sResult) {
+function facerecognition(sResult) {
     let button = $('#paymentValidationEmptyForm');
     if (sResult) {
         button.removeClass('falseAction');
@@ -33,9 +33,9 @@ function faceRecognition(sResult) {
         button.addClass('falseAction');
     }
 }
-function p_faceRecognition() {
-    // p_faceRecognition() => window.location='p_faceRecognition'
-    faceRecognition(true);
+function p_facerecognition() {
+    // p_facerecognition() => window.location='p_facerecognition'
+    facerecognition(true);
 }
 
 function addcard(sResult) {

@@ -647,7 +647,7 @@
             <h3 style="margin-left:auto;">$18.00</h3>
         </div>
         <ul class="categorySelect">
-            <li onclick="p_faceRecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+            <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
             <li onclick="p_fingerprint()"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
         </ul>
         <div class="containerAction disabledAction" id="paymentValidationEmptyForm" href="#paymentValidation">
@@ -684,18 +684,24 @@
         <h4>Add document</h4>    
     </div>
 </div>
-    <div id="newTransaction" class="animatedModal">
+    <div id="newTransaction" class="animatedModal newTransaction">
     <div class="modalHeader">
         <div>
-                <i class="fal fa-file-contract"></i>
+            <i class="fal fa-file-contract"></i>
             <span class="modalTitle">New Transaction</span>
         </div>
         <i class="close-newTransaction fal fa-times-circle"></i>
     </div>
     <div class="formTitle">
-        <h4>Add transcation</h4>    
+        <h4>Choose a payment method</h4>    
     </div>
+    <ul class="categorySelect">
+            <li><i class="fal fa-wallet"></i><h3>Wallet Balance</h3></li>
+            <li id="creditCard" href="#travelCategory"><i class="fal fa-credit-card"></i></i><h3>Credit Card</h3></li>
+        </ul>
 </div>
+
+
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
