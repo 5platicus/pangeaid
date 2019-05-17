@@ -1,13 +1,51 @@
+/**
+ * functions for fingerprint
+ * in p_fingerprint comment how to enable it for android hook
+*/
 function fingerprint(sResult) {
-    console.log(sResult);
-    alert("fingerprint result:" + sResult);
+    let button = $('#paymentValidationEmptyForm');
+    if (sResult) {
+        button.removeClass('falseAction');
+        button.removeClass('disabledAction');
+        button.addClass('enabledAction');
+    } else {
+        button.removeCalass('enabledAction');
+        button.addClass('falseAction');
+    }
 }
+function p_fingerprint() {
+    // p_fingerprint() => window.location='p_fingerprint'
+    fingerprint(true);
+}
+
+/**
+ * functions for face recognition
+ * in p_fingerprint comment how to enable it for android hook
+*/
+function faceRecognition(sResult) {
+    let button = $('#paymentValidationEmptyForm');
+    if (sResult) {
+        button.removeClass('falseAction');
+        button.removeClass('disabledAction');
+        button.addClass('enabledAction');
+    } else {
+        button.removeCalass('enabledAction');
+        button.addClass('falseAction');
+    }
+}
+function p_faceRecognition() {
+    // p_faceRecognition() => window.location='p_faceRecognition'
+    faceRecognition(true);
+}
+
 function addcard(sResult) {
     alert("addcard result:" + sResult);
 }
+
 function scanandpay(sResult) {
     alert("scanandpay result:" + sResult);
 }
+
 
 /**
  * MODAL ROUTES INITIALIZATION
