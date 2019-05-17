@@ -26,6 +26,18 @@ gulp.task('ejs', function () {
     .pipe(gulpConnect.reload());
 });
 
+gulp.task('scripts', function () {
+  gulp.src('./src/js/**.js')
+    .pipe(gulp.dest('./public/js/'))
+    .pipe(gulpConnect.reload());
+});
+
+gulp.task('assets', function () {
+  gulp.src('./src/assets/**/*.*')
+    .pipe(gulp.dest('./public/assets/'))
+    .pipe(gulpConnect.reload());
+});
+
 gulp.task('less', function () {
   return gulp.src('./src/less/main.less')
     .pipe(gulpLess())
@@ -37,7 +49,8 @@ gulp.task('less', function () {
 
 gulp.task('watch', function () {
   gulp.watch([src + '/less/*.less', src + '/less/**/*.less'], ['less']);
+  gulp.watch([src + '/less/*.less', src + '/less/**/*.less'], ['less']);
   return gulp.watch([src + '/*.ejs', src + '/ejs/**/*.ejs'], ['ejs']);
 });
 
-gulp.task('default', ['connect', 'less', 'ejs', 'watch']);
+gulp.task('default', ['connect', 'assets', 'scripts', 'less', 'ejs', 'watch']);
