@@ -1,19 +1,15 @@
-PSD to html Boilerplate
+PANGEAID
 ==
-
-Gulp + Ejs + Less + js + LiveReload + Bower
-
-[На русском](https://github.com/AveVlad/psd2html-boilerplate/blob/master/README.RU.md)
 
 # Install
 
-1\. Clone the git repository or [download the zipball](https://github.com/AveVlad/psd2html-boilerplate/archive/master.zip) and extract it.
+1\. Clone the git repository
 
-    git clone https://github.com/AveVlad/psd2html-boilerplate.git psd2html
+    git clone https://github.com/SamZamor/pangeaid
     
 2\. Run **npm** command to install the dependencies.
 
-    cd psd2html
+    cd pangeaid
     npm install
     bower install
 

@@ -603,6 +603,13 @@
                     <h4>Full Name</h4>
                 </label>
                 <input type="text">
+
+                <div class="signatureForm">
+                    <label class="signature">
+                        <h4>Signature</h4>
+                    </label>
+                    <canvas id="signature"></canvas>
+                </div>
                 <button id="prePaymentEmptyForm" href="#prePayment">Digitally Sign Form</button>
             </form>
         </div>
@@ -692,17 +699,8 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
 <script src="js/animatedModal.js"></script>
 <script src="js/Main.js"></script>
-<script>
-    $("#govFormEmpty").animatedModal();
-    $("#travelCategoryFormEmpty").animatedModal();
-    $("#visaApplicationFormEmpty").animatedModal();
-    $("#prePaymentEmptyForm").animatedModal();
-    $("#paymentValidationEmptyForm").animatedModal();
-
-    $("#docsFormEmpty").animatedModal();
-    $("#walletFormEmpty").animatedModal();
-</script>
 </body>
 </html>

@@ -1,3 +1,18 @@
+/**
+ * MODAL ROUTES INITIALIZATION
+*/
+$("#govFormEmpty").animatedModal();
+$("#travelCategoryFormEmpty").animatedModal();
+$("#visaApplicationFormEmpty").animatedModal();
+$("#prePaymentEmptyForm").animatedModal();
+$("#paymentValidationEmptyForm").animatedModal();
+
+$("#docsFormEmpty").animatedModal();
+$("#walletFormEmpty").animatedModal();
+
+/**
+ * TAB NAVIGATION ROUTES WITH OPTIONS
+*/
 let availableTabs = {
     govLink: {
         id: '#gov',
@@ -15,6 +30,11 @@ let availableTabs = {
         icon: 'fa-wallet',
     },
 };
+
+
+/**
+ * CLICK ACTION FOR TAB NAVIGATION
+*/
 $('.tabLink').on('click', function() {
     let tab = $(this).data("id");
     $(".tabLink").removeClass("current");
@@ -32,6 +52,9 @@ $('.tabLink').on('click', function() {
     });
 });
 
+/**
+ * PASTING DUMMY DATA FOR PROFILE
+*/
 $('#pasteProfile').on('click', function() {
     let variables = {
         surname: 'Miora',
@@ -53,3 +76,13 @@ $('#pasteProfile').on('click', function() {
     $('[data-profile="profilePic"]').css('background', 'url(../images/profilePic.png)');
     $('[data-profile="profilePic"]').css('background-size', 'cover');
 })
+
+/*
+ * signature pad
+ */
+let canvas = document.getElementById("signature");
+let signaturePad = new SignaturePad(canvas);
+$('#prePaymentEmptyForm').on('click', function() {
+    let data = signaturePad.toData();
+    console.log(data);
+});

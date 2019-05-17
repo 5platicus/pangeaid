@@ -1,13 +1,11 @@
 {
-  "name": "psd2html-boilerplate",
-  "description": "Gulp + Ejs + Less + js + LiveReload + Bower",
-  "version": "1.2.2",
+  "name": "pangeaid",
+  "description": "Pangeaid",
+  "version": "1.0.0",
   "license": "MIT",
-  "repository": "avevlad/psd2html-boilerplate",
+  "repository": "https://github.com/SamZamor/pangeaid",
   "author": {
-    "name": "Vladislav Derjavin",
-    "email": "dev@vld.me",
-    "url": "http://vld.me"
+    "name": "Sam Zamor"
   },
   "dependencies": {
     "gulp": "^3.9.0",
@@ -19,7 +17,6 @@
     "gulp-if": "^2.0.2",
     "gulp-less": "^3.0.5",
     "gulp-uglify": "^3.0.2",
-    "gulp-util": "^3.0.7",
-    "signature_pad": "^3.0.0-beta.3"
+    "gulp-util": "^3.0.7"
   }
 }
