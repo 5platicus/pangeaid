@@ -621,7 +621,7 @@
                     </label>
                     <canvas id="signature"></canvas>
                 </div>
-                <button id="prePaymentEmptyForm" href="#prePayment">Digitally Sign Form</button>
+                <button id="prePaymentFormEmpty" href="#prePayment">Digitally Sign Form</button>
             </form>
         </div>
     </div>
@@ -665,7 +665,7 @@
             <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
             <li onclick="p_fingerprint()"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
         </ul>
-        <div class="containerAction disabledAction" id="paymentValidationEmptyForm" href="#paymentValidation">
+        <div class="containerAction disabledAction" id="paymentValidationFormEmpty" href="#paymentValidation">
             <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
         </div>
     </div>
@@ -708,11 +708,11 @@
 </div>
 
 </div>
+    
     <div id="newTransaction" class="animatedModal newTransaction">
     <div class="modalHeader">
     
-
-        <i class="close-newTransaction fal fa-chevron-left"></i>
+        <div></div>
     
     <div>
         <i class="fal fa-file-contract"></i>
@@ -725,11 +725,173 @@
 </div>
 
     <ul class="categorySelect">
-            <li><i class="fal fa-wallet"></i><h3>Wallet Balance</h3></li>
-            <li id="creditCard" href="#travelCategory"><i class="fal fa-credit-card"></i></i><h3>Credit Card</h3></li>
-        </ul>
+        <li class="creditCard" id="newTransactionSendMoneyFormEmpty" href="#sendMoney"><i class="fal fa-credit-card"></i></i><h3>Send Money</h3></li>
+        <li class="creditCard" id="newTransactionReceiveMoneyFormEmpty" href="#receiveMoney"><i class="fal fa-credit-card"></i></i><h3>Receive Money</h3></li>
+        <li class="creditCard" id="newTransactionPayBillFormEmpty" href="#payBill"><i class="fal fa-credit-card"></i></i><h3>Pay Bill</h3></li>
+    </ul>
 </div>
 
+
+    <div id="sendMoney" class="animatedModal sendMoney">
+    <div class="modalHeader">
+    
+
+        <i class="close-sendMoney fal fa-chevron-left"></i>
+    
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle">Send Money</span>
+    </div>
+    <i class="close-newTransaction close-sendMoney fal fa-times-circle"></i>
+</div>
+<div class="formTitle">
+    <h4>Send Money</h4>    
+</div>
+
+    <div class="containerAction" id="sendMoneyFormEmpty" href="#sendPaymentMethod">
+        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    </div>
+</div>
+    <div id="receiveMoney" class="animatedModal receiveMoney">
+    <div class="modalHeader">
+    
+
+        <i class="close-receiveMoney fal fa-chevron-left"></i>
+    
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle">Receive Money</span>
+    </div>
+    <i class="close-newTransaction close-receiveMoney fal fa-times-circle"></i>
+</div>
+<div class="formTitle">
+    <h4>Receive Money</h4>    
+</div>
+
+    <div class="containerAction" id="receiveMoneyFormEmpty" href="#receiveMoney">
+        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    </div>
+</div>
+    <div id="payBill" class="animatedModal payBill">
+    <div class="modalHeader">
+    
+
+        <i class="close-payBill fal fa-chevron-left"></i>
+    
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle">Pay Bill</span>
+    </div>
+    <i class="close-newTransaction close-payBill fal fa-times-circle"></i>
+</div>
+<div class="formTitle">
+    <h4>Pay Bill</h4>    
+</div>
+
+    <div class="containerAction" id="payBillFormEmpty" href="#payBill">
+        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    </div>
+</div>
+
+    <div id="sendPaymentMethod" class="animatedModal sendPaymentMethod">
+    <div class="modalHeader">
+    
+
+        <i class="close-sendPaymentMethod fal fa-chevron-left"></i>
+    
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle">Payment Method</span>
+    </div>
+    <i class="close-newTransaction close-sendMoney close-sendPaymentMethod fal fa-times-circle"></i>
+</div>
+<div class="formTitle">
+    <h4>Payment Method</h4>    
+</div>
+
+    <div class="containerAction" id="sendPaymentMethodFormEmpty" href="#sendRecipientInformation">
+        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    </div>
+</div>
+    <div id="sendRecipientInformation" class="animatedModal sendRecipientInformation">
+    <div class="modalHeader">
+    
+
+        <i class="close-sendRecipientInformation fal fa-chevron-left"></i>
+    
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle">Recipient Information</span>
+    </div>
+    <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation fal fa-times-circle"></i>
+</div>
+<div class="formTitle">
+    <h4>Recipient Information</h4>    
+</div>
+
+    <div class="containerAction" id="sendRecipientInformationFormEmpty" href="#sendAuthentication">
+        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    </div>
+</div>
+    <div id="sendAuthentication" class="animatedModal sendAuthentication">
+    <div class="modalHeader">
+    
+
+        <i class="close-sendAuthentication fal fa-chevron-left"></i>
+    
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle">Send Authentication</span>
+    </div>
+    <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication fal fa-times-circle"></i>
+</div>
+<div class="formTitle">
+    <h4>Send Authentication</h4>    
+</div>
+
+    <div class="containerAction" id="sendAuthenticationFormEmpty" href="#sendPaymentValidation">
+        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    </div>
+</div>
+    <div id="sendPaymentValidation" class="animatedModal sendPaymentValidation">
+    <div class="modalHeader">
+    
+
+        <i class="close-sendPaymentValidation fal fa-chevron-left"></i>
+    
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle">Payment Validation</span>
+    </div>
+    <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication close-sendPaymentValidation fal fa-times-circle"></i>
+</div>
+<div class="formTitle">
+    <h4>Payment Validation</h4>    
+</div>
+
+    <div class="containerAction" id="sendPaymentValidationFormEmpty" href="#sendSuccess">
+        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    </div>
+</div>
+    <div id="sendSuccess" class="animatedModal sendSuccess">
+    <div class="modalHeader">
+    
+
+        <i class="close-sendSuccess fal fa-chevron-left"></i>
+    
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle">Send Success</span>
+    </div>
+    <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication close-sendPaymentValidation close-sendSuccess fal fa-times-circle"></i>
+</div>
+<div class="formTitle">
+    <h4>Send Success</h4>    
+</div>
+    <div class="containerAction" id="sendSuccessFormEmpty" href="#sendSuccess">
+        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    </div>
+</div>
 
 </div>
 

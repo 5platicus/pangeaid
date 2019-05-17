@@ -3,7 +3,7 @@
  * in p_fingerprint comment how to enable it for android hook
 */
 function fingerprint(sResult) {
-    let button = $('#paymentValidationEmptyForm');
+    let button = $('#paymentValidationFormEmpty');
     if (sResult) {
         button.removeClass('falseAction');
         button.removeClass('disabledAction');
@@ -24,7 +24,7 @@ function p_fingerprint() {
  * in p_fingerprint comment how to enable it for android hook
 */
 function facerecognition(sResult) {
-    let button = $('#paymentValidationEmptyForm');
+    let button = $('#paymentValidationFormEmpty');
     if (sResult) {
         button.removeClass('falseAction');
         button.removeClass('disabledAction');
@@ -54,11 +54,22 @@ function scanandpay(sResult) {
 $("#govFormEmpty").animatedModal();
 $("#travelCategoryFormEmpty").animatedModal();
 $("#visaApplicationFormEmpty").animatedModal();
-$("#prePaymentEmptyForm").animatedModal();
-$("#paymentValidationEmptyForm").animatedModal();
+$("#prePaymentFormEmpty").animatedModal();
+$("#paymentValidationFormEmpty").animatedModal();
 
 $("#docsFormEmpty").animatedModal();
+
 $("#walletFormEmpty").animatedModal();
+$("#newTransactionSendMoneyFormEmpty").animatedModal();
+$("#newTransactionReceiveMoneyFormEmpty").animatedModal();
+$("#newTransactionPayBillFormEmpty").animatedModal();
+
+$("#sendMoneyFormEmpty").animatedModal();
+$("#sendPaymentMethodFormEmpty").animatedModal();
+$("#sendRecipientInformationFormEmpty").animatedModal();
+$("#sendAuthenticationFormEmpty").animatedModal();
+$("#sendPaymentValidationFormEmpty").animatedModal();
+$("#sendSuccessFormEmpty").animatedModal();
 
 /**
  * TAB NAVIGATION ROUTES WITH OPTIONS
@@ -132,7 +143,7 @@ $('#pasteProfile').on('click', function() {
  */
 let canvas = document.getElementById("signature");
 let signaturePad = new SignaturePad(canvas);
-$('#prePaymentEmptyForm').on('click', function() {
+$('#prePaymentFormEmpty').on('click', function() {
     let data = signaturePad.toData();
     signaturePad.clear();
     console.log(data);

@@ -19,8 +19,19 @@ pageTitle = "PangeaID"
     <% include ejs/screens/gov/prePayment.ejs %>
     <% include ejs/screens/gov/paymentValidation.ejs %>
 
-    <% include ejs/screens/gov/addDocument.ejs %>
-    <% include ejs/screens/gov/newTransaction.ejs %>
+    <% include ejs/screens/docs/addDocument.ejs %>
+    
+    <% include ejs/screens/wallet/newTransaction.ejs %>
+    <% include ejs/screens/wallet/sendMoney.ejs %>
+    <% include ejs/screens/wallet/receiveMoney.ejs %>
+    <% include ejs/screens/wallet/payBill.ejs %>
+
+    <% include ejs/screens/wallet/sendPaymentMethod.ejs %>
+    <% include ejs/screens/wallet/sendRecipientInformation.ejs %>
+    <% include ejs/screens/wallet/sendAuthentication.ejs %>
+    <% include ejs/screens/wallet/sendPaymentValidation.ejs %>
+    <% include ejs/screens/wallet/sendSuccess.ejs %>
+
 </div>
 
 <% include ejs/layout/bottom.ejs %>
