@@ -1,15 +1,6 @@
-<div id="visaApplication" class="animatedModal visaApplication">
-    <div class="modalHeader">
-        <i class="close-visaApplication fal fa-chevron-left"></i>
-        <div>
-            <i class="fal fa-file-contract"></i>
-            <span class="modalTitle">FORM 223F</span>
-        </div>
-        <i class="close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
-    </div>
-    <div class="formTitle">
-        <h4>STANDARD VISA APPLICATION FORM</h4>    
-    </div>
+<div id="visaApplication" class="animatedModal visaApplication">    
+    <%- include('ejs/include/navBar.ejs', { title: "FORM 223F", subTitle: "STANDARD VISA APPLICATION FORM", closeClass: "visaApplication", closeClasses: "close-visaApplication close-travelCategory close-applicationCategories" }) %>
+    
     <div class="modalContent">
         
         <div class="profilePic" data-profile="profilePic">

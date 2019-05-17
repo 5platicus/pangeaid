@@ -71,7 +71,6 @@
 
         modal.click(function(event) {       
             event.preventDefault();
-            console.log(this);
             if (!$(this).hasClass('disabledAction')) {
                 $('body, html').css({'overflow':'hidden'});
                 if (href == idConc) {
@@ -89,21 +88,6 @@
                     };  
                 } 
             }
-            // $('body, html').css({'overflow':'hidden'});
-            // if (href == idConc) {
-            //     if (id.hasClass(settings.modalTarget+'-off')) {
-            //         id.removeClass(settings.animatedOut);
-            //         id.removeClass(settings.modalTarget+'-off');
-            //         id.addClass(settings.modalTarget+'-on');
-            //     } 
-
-            //      if (id.hasClass(settings.modalTarget+'-on')) {
-            //         settings.beforeOpen();
-            //         id.css({'opacity':settings.opacityIn,'z-index':settings.zIndexIn});
-            //         id.addClass(settings.animatedIn);  
-            //         id.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterOpen);
-            //     };  
-            // } 
         });
 
 

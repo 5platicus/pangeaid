@@ -1,0 +1,16 @@
+<div class="modalHeader">
+    <% if (closeClass) { %>
+
+        <i class="close-<%= closeClass %> fal fa-chevron-left"></i>
+    <% } else { %>
+        <div></div>
+    <% } %>
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle"><%= title %></span>
+    </div>
+    <i class="<%= closeClasses %> fal fa-times-circle"></i>
+</div>
+<div class="formTitle">
+    <h4><%= subTitle %></h4>    
+</div>

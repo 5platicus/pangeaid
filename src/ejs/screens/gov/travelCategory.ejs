@@ -1,15 +1,6 @@
 <div id="travelCategory" class="animatedModal travelCategory">
-    <div class="modalHeader">
-        <i class="close-travelCategory fal fa-chevron-left"></i>
-        <div>
-            <i class="fal fa-file-contract"></i>
-            <span class="modalTitle">Travel Category</span>
-        </div>
-        <i class="close-travelCategory close-applicationCategories fal fa-times-circle"></i>
-    </div>
-    <div class="formTitle">
-        <h4>Travel Category</h4>    
-    </div>
+    <%- include('ejs/include/navBar.ejs', { title: "Travel Category", subTitle: "Travel Category", closeClass: "travelCategory", closeClasses: "", closeClasses: "close-travelCategory close-applicationCategories" }) %>
+
     <ul class="innerCategorySelect">
         <li>Form 112A - Customs</li>
         <li>Form 32B - Import/Export</li>

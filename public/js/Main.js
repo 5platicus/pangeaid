@@ -10,6 +10,7 @@ function fingerprint(sResult) {
         button.addClass('enabledAction');
     } else {
         button.removeClass('enabledAction');
+        button.addClass('disabledAction');
         button.addClass('falseAction');
     }
 }
@@ -35,7 +36,7 @@ function facerecognition(sResult) {
 }
 function p_facerecognition() {
     // p_facerecognition() => window.location='p_facerecognition'
-    facerecognition(true);
+    faceRecognition(true);
 }
 
 function addcard(sResult) {

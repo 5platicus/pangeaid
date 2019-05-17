@@ -1,15 +1,6 @@
 <div id="prePayment" class="animatedModal prePayment">
-    <div class="modalHeader">
-        <i class="close-prePayment fal fa-chevron-left"></i>
-        <div>
-            <i class="fal fa-file-contract"></i>
-            <span class="modalTitle">Pre Payment</span>
-        </div>
-        <i class="close-prePayment close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
-    </div>
-    <div class="formTitle">
-        <h4>Please validate your identity</h4>    
-    </div>
+    <%- include('ejs/include/navBar.ejs', { title: "Pre Payment", subTitle: "Please validate your identity", closeClass: "prePayment", closeClasses: "close-prePayment close-visaApplication close-travelCategory close-applicationCategories" }) %>
+
     <div class="verticalFlexFilled">
         <div class="verticalFlexFilled content">
             <h3>Visa Application Form</h3>
