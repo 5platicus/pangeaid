@@ -164,7 +164,7 @@
                         </div>
                     </div>
                     <ul class="docsMenu">
-                        <li id="displayDocQREmptyForm" href="#displayDocQR"><i class="fal fa-qrcode"></i><h4>Show Code</h4></li>
+                        <li id="docsAuthenticationEmptyForm" href="#docsAuthentication"><i class="fal fa-qrcode"></i><h4>Show Code</h4></li>
                         <li><i class="fal fa-share-square"></i><h4>Share ID</h4></li>
                         <li id="trash"><i class="fal fa-trash-alt" style="color:#ED2631;"></i></li>
                     </ul>
@@ -679,6 +679,7 @@
     </div>
 </div>
 
+    
     <div id="addDocument" class="animatedModal">
     <div class="modalHeader addDocument">
     
@@ -697,7 +698,38 @@
 
     </div>
 </div>
-    <div id="displayDocQR" class="animatedModal displayQR">
+    <div id="docsAuthentication" class="animatedModal docsAuthentication">
+    <div class="modalHeader docsAuthentication">
+    
+        <i class="back-docsAuthentication fal fa-chevron-left"></i>
+    
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle">Driver&#39;s License</span>
+    </div>
+    <i class="close-docsAuthentication fal fa-times-circle"></i>
+</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Authenticate to see QR code</h4>    
+    </div>
+
+    <div class="verticalFlexFilled">
+        <div></div>
+        <div>
+            <ul class="categorySelect">
+                <li onclick="window.location='p_facerecognition'"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+                <li onclick="window.location='p_fingerprint'"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+            </ul>
+            <div class="containerAction disabledAction" id="displayDocQREmptyForm" href="#displayDocQR">
+                <i class="fal fa-money-bill-wave"></i><h4>Next</h4>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+    <div id="displayDocQR" class="animatedModal displayDocQR">
     <div class="modalHeader displayDocQR">
     
         <i class="back-displayDocQR fal fa-chevron-left"></i>

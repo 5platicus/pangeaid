@@ -1,0 +1,24 @@
+<div id="docsAuthentication" class="animatedModal docsAuthentication">
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "Driver's License",
+        subTitle: "Authenticate to see QR code",
+        identifier: "docsAuthentication",
+        back: true,
+        closeClasses: "close-docsAuthentication"
+    }) %>
+
+    <div class="verticalFlexFilled">
+        <div></div>
+        <div>
+            <ul class="categorySelect">
+                <li onclick="window.location='p_facerecognition'"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+                <li onclick="window.location='p_fingerprint'"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+            </ul>
+            <div class="containerAction disabledAction" id="displayDocQREmptyForm" href="#displayDocQR">
+                <i class="fal fa-money-bill-wave"></i><h4>Next</h4>
+            </div>
+        </div>
+    </div>
+
+    <% include ../../include/modalFooter.ejs %>
+</div>

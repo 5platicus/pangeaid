@@ -48,11 +48,6 @@ $(document).ready(function() {
             showAlertSuccess( "Successful transaction",  "Successful transaction");
         }, 10000)
     });
-    $('#displayDocQREmptyForm').on('click', function() {
-        setTimeout(function() {
-            showAlertSuccess( "Successful transaction",  "Successful transaction");
-        }, 10000)
-    });
     $('#sendPaymentValidationFormEmpty').on('click', function() {
         showAlertSuccess( "Successful transaction",  "Successful transaction");
     });
@@ -85,10 +80,11 @@ function initializeModals() {
     $("#prePaymentFormEmpty").animatedModal(options);
 
     $("#docsFormEmpty").animatedModal();
+    $("#docsAuthenticationEmptyForm").animatedModal();
+    $("#displayDocQREmptyForm").animatedModal();
 
     $("#walletFormEmpty").animatedModal();
     
-    $("#displayDocQREmptyForm").animatedModal();
     $("#displayQREmptyForm").animatedModal(options);
     $("#sendPaymentMethodFormEmpty").animatedModal(options);
     $("#sendRecipientInformationFormEmpty").animatedModal(options);
