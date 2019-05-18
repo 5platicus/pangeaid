@@ -6,9 +6,14 @@
         back: true,
         closeClasses: "close-newTransaction close-displayQR"
     }) %>
-
-    <div class="containerAction" id="displayQRFormEmpty" href="#displayQR">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    
+    <div class="verticalFlexFilled">
+        <div class="qrCodeContainer">
+            <image id="qrCodeImage" class="qrCodeImage" src="assets/images/qrcode.png" />
+        </div>
+        <div class="containerAction" id="displayQRFormEmpty" href="#displayQR">
+            <i class="fal fa-layer-plus"></i><h4>Next</h4>
+        </div>
     </div>
 
     <% include ../../include/modalFooter.ejs %>

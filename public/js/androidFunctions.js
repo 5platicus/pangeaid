@@ -51,8 +51,7 @@ function p_addcard() {
 
 function scanandpay(sResult) {
     if (sResult) {
-        $('[data-profile="recipientName"]').val('Rakotomalala Miora');
-        $('[data-profile="amount"]').val('$12.43');
+        pasteScanAndPay()
     }
 }
 function p_scanandpay() {

@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/classie.js"></script>
 </head>
 <body>
 
@@ -766,9 +767,14 @@
     <div class="formTitle">
         <h4>Receive Money</h4>    
     </div>
-
-    <div class="containerAction" id="displayQRFormEmpty" href="#displayQR">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    
+    <div class="verticalFlexFilled">
+        <div class="qrCodeContainer">
+            <image id="qrCodeImage" class="qrCodeImage" src="assets/images/qrcode.png" />
+        </div>
+        <div class="containerAction" id="displayQRFormEmpty" href="#displayQR">
+            <i class="fal fa-layer-plus"></i><h4>Next</h4>
+        </div>
     </div>
 
     </div>
@@ -796,7 +802,6 @@
                 <i class="fal fa-credit-card"></i></i><h3>Wallet</h3>
             </div>
             <h4>Balance: $214.23</h4>
-            <br />
         </li>
         <li id="sendAddCard" class="creditCard" onclick="p_addcard()"><i class="fal fa-credit-card"></i></i><h3>Add credit card</h3></li>
     </ul>
@@ -819,25 +824,32 @@
         <h4>Recipient Information</h4>    
     </div>
 
-    <div class="generalForm">  
-        <form class="" action="">
-            <label class="amount">
-                <h4>Amount</h4>
-            </label>
-            <input type="text" data-profile="amount" />
-            <label class="recipientName">
-                <h4>Recipient name</h4>
-            </label>
-            <input type="text" data-profile="recipientName">
-        </form>
-    </div>
-    <br />
-    <div class="containerAction" onclick="p_scanandpay()">
-        <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
-    </div>
-    <br />
-    <div class="containerAction" id="sendAuthenticationFormEmpty" href="#sendAuthentication">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    <div class="verticalFlexFilled">
+        <div class="generalForm">  
+            <form class="" action="">
+                <label class="amount">
+                    <h4>Amount</h4>
+                </label>
+                <input type="text" data-profile="amount" />
+                <label class="recipientName">
+                    <h4>Recipient name</h4>
+                </label>
+                <input type="text" data-profile="recipientName">
+                <label class="recipientEmail">
+                    <h4>Recipient email</h4>
+                </label>
+                <input type="text" data-profile="recipientEmail">
+            </form>
+        </div>
+        <div>
+            <div class="containerAction" onclick="p_scanandpay()">
+                <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
+            </div>
+            <br />
+            <div class="containerAction" id="sendAuthenticationFormEmpty" href="#sendAuthentication">
+                <i class="fal fa-layer-plus"></i><h4>Next</h4>
+            </div>
+        </div>
     </div>
 
     </div>
@@ -858,17 +870,21 @@
         <h4>Send Authentication</h4>    
     </div>
 
-    <div>
-        <h4>Rakotomalala Miora</h4>
-        <h4>Amount: $12.43</h4>
-    </div>
+    <div class="verticalFlexFilled">
+        <div>
+            <h4>Rakotomalala Miora</h4>
+            <h4>Amount: $12.43</h4>
+        </div>
 
-    <ul class="categorySelect">
-        <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
-        <li onclick="p_fingerprint()"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
-    </ul>
-    <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty" href="#sendPaymentValidation">
-        <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
+        <div>
+            <ul class="categorySelect">
+                <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+                <li onclick="p_fingerprint()"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+            </ul>
+            <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty" href="#sendPaymentValidation">
+                <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
+            </div>
+        </div>
     </div>
     
     </div>
@@ -888,9 +904,11 @@
     <div class="formTitle">
         <h4>Payment Validation</h4>    
     </div>
-
-    <div class="containerAction" id="sendSuccessFormEmpty" href="#sendSuccess">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    <div class="verticalFlexFilled">
+        <div></div>
+        <div class="containerAction" id="sendSuccessFormEmpty" href="#sendSuccess">
+            <i class="fal fa-layer-plus"></i><h4>Next</h4>
+        </div>
     </div>
 
     </div>
@@ -911,10 +929,12 @@
         <h4>Send Success</h4>    
     </div>
 
-    <div class="containerAction" id="sendSuccessFormEmpty" href="#sendSuccess">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    <div class="verticalFlexFilled">
+            <div></div>
+        <div class="containerAction" id="sendSuccessFormEmpty" href="#sendSuccess">
+            <i class="fal fa-layer-plus"></i><h4>Next</h4>
+        </div>
     </div>
-
     </div>
 </div>
 
@@ -1031,6 +1051,7 @@
 
 </div>
 
+<script src="js/uiProgressButton.js"></script>
 <script src="js/signature.js"></script>
 <script src="js/animatedModal.js"></script>
 <script src="js/Main.js"></script>

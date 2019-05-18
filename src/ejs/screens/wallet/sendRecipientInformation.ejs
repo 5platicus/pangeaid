@@ -7,25 +7,32 @@
         closeClasses: "close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation"
     }) %>
 
-    <div class="generalForm">  
-        <form class="" action="">
-            <label class="amount">
-                <h4>Amount</h4>
-            </label>
-            <input type="text" data-profile="amount" />
-            <label class="recipientName">
-                <h4>Recipient name</h4>
-            </label>
-            <input type="text" data-profile="recipientName">
-        </form>
-    </div>
-    <br />
-    <div class="containerAction" onclick="p_scanandpay()">
-        <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
-    </div>
-    <br />
-    <div class="containerAction" id="sendAuthenticationFormEmpty" href="#sendAuthentication">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    <div class="verticalFlexFilled">
+        <div class="generalForm">  
+            <form class="" action="">
+                <label class="amount">
+                    <h4>Amount</h4>
+                </label>
+                <input type="text" data-profile="amount" />
+                <label class="recipientName">
+                    <h4>Recipient name</h4>
+                </label>
+                <input type="text" data-profile="recipientName">
+                <label class="recipientEmail">
+                    <h4>Recipient email</h4>
+                </label>
+                <input type="text" data-profile="recipientEmail">
+            </form>
+        </div>
+        <div>
+            <div class="containerAction" onclick="p_scanandpay()">
+                <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
+            </div>
+            <br />
+            <div class="containerAction" id="sendAuthenticationFormEmpty" href="#sendAuthentication">
+                <i class="fal fa-layer-plus"></i><h4>Next</h4>
+            </div>
+        </div>
     </div>
 
     <% include ../../include/modalFooter.ejs %>
