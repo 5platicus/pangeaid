@@ -98,6 +98,11 @@
                 settings.beforeClose().then((res) => {
                     result = res;
                     if (res) {
+                        /**
+                         * RESETING SCREENS ON CLOSE PRESS
+                        */
+                        resetGovScreens();
+                        
                         let classList = $(this).attr('class').split(/\s+/);
                         $.each(classList, function(index, item) {
                             if (item.toLowerCase().indexOf('close-') >= 0) {
