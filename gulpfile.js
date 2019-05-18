@@ -1,5 +1,7 @@
 var gulp = require('gulp');
+var webserver = require('gulp-webserver');
 var gulpConnect = require('gulp-connect');
+var ip = require('ip');
 var gulpLess = require('gulp-less');
 var gulpEjs = require('gulp-ejs');
 var uglify = require('gulp-uglify');
@@ -17,6 +19,16 @@ gulp.task("connect", function () {
     port: 1337,
     livereload: true
   });
+});
+
+gulp.task('webserver', function() {
+  gulp.src('public')
+    .pipe(webserver({
+      livereload: true,
+      open: true,
+      host: ip.address(),
+      port: 1337
+    }));
 });
 
 gulp.task('ejs', function () {
@@ -53,4 +65,4 @@ gulp.task('watch', function () {
   return gulp.watch([src + '/*.ejs', src + '/ejs/**/*.ejs'], ['ejs']);
 });
 
-gulp.task('default', ['connect', 'assets', 'scripts', 'less', 'ejs', 'watch']);
+gulp.task('default', ['webserver', 'assets', 'scripts', 'less', 'ejs', 'watch']);

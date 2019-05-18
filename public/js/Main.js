@@ -141,10 +141,11 @@ $('#pasteProfile').on('click', function() {
 /*
  * signature pad
  */
-let canvas = document.getElementById("signature");
-let signaturePad = new SignaturePad(canvas);
-$('#prePaymentFormEmpty').on('click', function() {
-    let data = signaturePad.toData();
-    signaturePad.clear();
-    console.log(data);
-});
+// let canvas = document.getElementById("signature");
+// let signaturePad = new SignaturePad(canvas);
+// $('#prePaymentFormEmpty').on('click', function() {
+//     let data = signaturePad.toData();
+//     signaturePad.clear();
+//     console.log(data);
+// });
+$('#signature').signature();
