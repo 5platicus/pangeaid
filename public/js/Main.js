@@ -52,16 +52,18 @@ function initializeModals() {
     $("#docsFormEmpty").animatedModal();
 
     $("#walletFormEmpty").animatedModal();
-    $("#newTransactionSendMoneyFormEmpty").animatedModal();
-    $("#newTransactionReceiveMoneyFormEmpty").animatedModal(options);
-    $("#newTransactionPayBillFormEmpty").animatedModal(options);
 
-    $("#sendMoneyFormEmpty").animatedModal(options);
+    $("#displayQREmptyForm").animatedModal(options);
     $("#sendPaymentMethodFormEmpty").animatedModal(options);
     $("#sendRecipientInformationFormEmpty").animatedModal(options);
     $("#sendAuthenticationFormEmpty").animatedModal(options);
     $("#sendPaymentValidationFormEmpty").animatedModal(options);
     $("#sendSuccessFormEmpty").animatedModal(options);
+    $("#payPaymentMethodFormEmpty").animatedModal(options);
+    $("#payRecipientInformationFormEmpty").animatedModal(options);
+    $("#payAuthenticationFormEmpty").animatedModal(options);
+    $("#payPaymentValidationFormEmpty").animatedModal(options);
+    $("#paySuccessFormEmpty").animatedModal(options);
 }
 
 /**

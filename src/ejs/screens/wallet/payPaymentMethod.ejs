@@ -1,0 +1,15 @@
+<div id="payPaymentMethod" class="animatedModal payPaymentMethod">
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "Payment Bill",
+        subTitle: "Payment Method",
+        identifier: "payPaymentMethod",
+        back: true,
+        closeClasses: "close-newTransaction close-payPaymentMethod"
+    }) %>
+
+    <div class="containerAction" id="payRecipientInformationFormEmpty" href="#payRecipientInformation">
+        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    </div>
+
+    <% include ../../include/modalFooter.ejs %>
+</div>
