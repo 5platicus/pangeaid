@@ -1,7 +1,15 @@
 <div id="paymentValidation" class="animatedModal paymentValidation">
-    <%- include('ejs/include/navBar.ejs', { title: "Payment Validation", subTitle: "Payment Validation", closeClass: "paymentValidation", closeClasses: "close-pa close-paymentValidation close-visaApplication close-travelCategory close-applicationCategories" }) %>
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "Payment Validation",
+        subTitle: "Payment Validation",
+        identifier: "paymentValidation",
+        back: true,
+        closeClasses: "close-paymentValidation close-prePayment close-visaApplication close-travelCategory close-applicationCategories"
+    }) %>
 
     <div class="containerAction" id="visaApplicationFormEmpty" href="#visaApplication">
         <i class="fal fa-layer-plus"></i><h4>New Application</h4>
     </div>
+    
+    <% include ../../include/modalFooter.ejs %>
 </div>

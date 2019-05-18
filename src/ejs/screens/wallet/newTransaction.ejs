@@ -1,10 +1,18 @@
 <div id="newTransaction" class="animatedModal newTransaction">
-    <%- include('ejs/include/navBar.ejs', { title: "New Transaction", subTitle: "Choose a payment method", closeClass: "", closeClasses: "close-newTransaction" }) %>
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "New Transaction",
+        subTitle: "Choose a payment method",
+        identifier: "newTransaction",
+        back: false,
+        closeClasses: "close-newTransaction"
+    }) %>
 
     <ul class="categorySelect">
         <li class="creditCard" id="newTransactionSendMoneyFormEmpty" href="#sendMoney"><i class="fal fa-credit-card"></i></i><h3>Send Money</h3></li>
         <li class="creditCard" id="newTransactionReceiveMoneyFormEmpty" href="#receiveMoney"><i class="fal fa-credit-card"></i></i><h3>Receive Money</h3></li>
         <li class="creditCard" id="newTransactionPayBillFormEmpty" href="#payBill"><i class="fal fa-credit-card"></i></i><h3>Pay Bill</h3></li>
     </ul>
+
+    <% include ../../include/modalFooter.ejs %>
 </div>
 

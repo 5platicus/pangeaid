@@ -1,7 +1,15 @@
 <div id="sendMoney" class="animatedModal sendMoney">
-    <%- include('ejs/include/navBar.ejs', { title: "Send Money", subTitle: "Send Money", closeClass: "sendMoney", closeClasses: "close-newTransaction close-sendMoney" }) %>
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "Send Money",
+        subTitle: "Send Money",
+        identifier: "sendMoney",
+        back: true,
+        closeClasses: "close-newTransaction close-sendMoney"
+    }) %>
 
     <div class="containerAction" id="sendMoneyFormEmpty" href="#sendPaymentMethod">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
+
+    <% include ../../include/modalFooter.ejs %>
 </div>

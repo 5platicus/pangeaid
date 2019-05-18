@@ -334,7 +334,7 @@
 </ul>
 
     <div id="applicationCategories" class="animatedModal">
-    <div class="modalHeader">
+    <div class="modalHeader applicationCategories">
     
         <div></div>
     
@@ -344,9 +344,10 @@
     </div>
     <i class="close-applicationCategories fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Select a category</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Select a category</h4>    
+    </div>
 
     <div class="verticalFlexFilled">
     <ul class="categorySelect">
@@ -360,11 +361,12 @@
         <li><i class="fal fa-balance-scale"></i><h3>Legal</h3></li>
     </ul>
     </div>
+
+    </div>
 </div>
     <div id="travelCategory" class="animatedModal travelCategory">
-    <div class="modalHeader">
+    <div class="modalHeader travelCategory">
     
-
         <i class="close-travelCategory fal fa-chevron-left"></i>
     
     <div>
@@ -373,9 +375,10 @@
     </div>
     <i class="close-travelCategory close-applicationCategories fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Travel Category</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Travel Category</h4>    
+    </div>
 
     <ul class="innerCategorySelect">
         <li>Form 112A - Customs</li>
@@ -391,12 +394,13 @@
         <li>Form 442B - Insurance</li>
         <li>Form B-343 - Debt Payment</li>
     </ul>
+
+    </div>
 </div>
 
     <div id="visaApplication" class="animatedModal visaApplication">    
-    <div class="modalHeader">
+    <div class="modalHeader visaApplication">
     
-
         <i class="close-visaApplication fal fa-chevron-left"></i>
     
     <div>
@@ -405,234 +409,233 @@
     </div>
     <i class="close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>STANDARD VISA APPLICATION FORM</h4>    
-</div>
-    
-    <div class="modalContent">
-        
-        <div class="profilePic" data-profile="profilePic">
-            Upload Photo
-        </div> 
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>STANDARD VISA APPLICATION FORM</h4>    
+    </div>
+            
+    <div class="profilePic" data-profile="profilePic">
+        Upload Photo
+    </div> 
 
-        <button id="pasteProfile">Paste Profile</button>
+    <button id="pasteProfile">Paste Profile</button>
 
-        <div class="generalForm">  
-            <form class="" action="">
-                <div class="formSectionTitle">
-                    <h4>1. Applicant Details</h4>
-                </div>  
-                <label class="formLabel">
-                    <h4>Surname</h4>
-                </label>
-                <input type="text" data-profile="surname" />
-                <label class="formLabel">
-                    <h4>First Name</h4>
-                </label>
-                <input type="text" data-profile="firstName">
-                <label class="formLabel">
-                    <h4>Birth Date</h4>
-                </label>
-                <input type="date" data-profile="birthDate">
-                <label class="formLabel">
-                    <h4>Birth Place</h4>
-                </label>
-                <input type="text" data-profile="birthPlace">
-                <label class="formLabel">
-                    <h4>Nationality</h4>
-                </label>
-                <input type="text" data-profile="nationality">
+    <div class="generalForm">  
+        <form class="" action="">
+            <div class="formSectionTitle">
+                <h4>1. Applicant Details</h4>
+            </div>  
+            <label class="formLabel">
+                <h4>Surname</h4>
+            </label>
+            <input type="text" data-profile="surname" />
+            <label class="formLabel">
+                <h4>First Name</h4>
+            </label>
+            <input type="text" data-profile="firstName">
+            <label class="formLabel">
+                <h4>Birth Date</h4>
+            </label>
+            <input type="date" data-profile="birthDate">
+            <label class="formLabel">
+                <h4>Birth Place</h4>
+            </label>
+            <input type="text" data-profile="birthPlace">
+            <label class="formLabel">
+                <h4>Nationality</h4>
+            </label>
+            <input type="text" data-profile="nationality">
 
-                <div class="formSectionTitle">
-                    <h4>2. Contact References (NOT IN MADAGASCAR)</h4>
-                </div>  
-                <label class="formLabel">
-                    <h4>Telephone Number</h4>
-                </label>
-                <input type="number">
-                <label class="formLabel">
-                    <h4>Fax Number</h4>
-                </label>
-                <input type="text">
-                <label class="formLabel">
-                    <h4>Email Address</h4>
-                </label>
-                <input type="email">
-                <label class="formLabel">
-                    <h4>Physical Address</h4>
-                </label>
-                <input type="text">
-                <label class="formLabel">
-                    <h4>Physicall Address 2</h4>
-                </label>
-                <input type="text">
+            <div class="formSectionTitle">
+                <h4>2. Contact References (NOT IN MADAGASCAR)</h4>
+            </div>  
+            <label class="formLabel">
+                <h4>Telephone Number</h4>
+            </label>
+            <input type="number">
+            <label class="formLabel">
+                <h4>Fax Number</h4>
+            </label>
+            <input type="text">
+            <label class="formLabel">
+                <h4>Email Address</h4>
+            </label>
+            <input type="email">
+            <label class="formLabel">
+                <h4>Physical Address</h4>
+            </label>
+            <input type="text">
+            <label class="formLabel">
+                <h4>Physicall Address 2</h4>
+            </label>
+            <input type="text">
 
-                <div class="formSectionTitle">
-                    <h4>3. Passport Details</h4>
-                </div>  
-                <label class="formLabel">
-                    <h4>Passport Number</h4>
-                </label>
-                <input type="text" data-profile="passportNumber" />
-                <label class="formLabel">
-                    <h4>Date Issued</h4>
-                </label>
-                <input type="date" data-profile="dateIssued" />
-                <label class="formLabel">
-                    <h4>Place Issued</h4>
-                </label>
-                <input type="text" data-profile="placeIssued" />
-                <label class="formLabel">
-                    <h4>Valid Until</h4>
-                </label>
-                <input type="date" data-profile="validUntil" />
-                <label class="formLabel">
-                    <h4>Issuing Authority</h4>
-                </label>
-                <input type="text" data-profile="issuingAuthority" />
+            <div class="formSectionTitle">
+                <h4>3. Passport Details</h4>
+            </div>  
+            <label class="formLabel">
+                <h4>Passport Number</h4>
+            </label>
+            <input type="text" data-profile="passportNumber" />
+            <label class="formLabel">
+                <h4>Date Issued</h4>
+            </label>
+            <input type="date" data-profile="dateIssued" />
+            <label class="formLabel">
+                <h4>Place Issued</h4>
+            </label>
+            <input type="text" data-profile="placeIssued" />
+            <label class="formLabel">
+                <h4>Valid Until</h4>
+            </label>
+            <input type="date" data-profile="validUntil" />
+            <label class="formLabel">
+                <h4>Issuing Authority</h4>
+            </label>
+            <input type="text" data-profile="issuingAuthority" />
 
-                <div class="formSectionTitle">
-                    <h4>4. Visit Details</h4>
-                </div>  
+            <div class="formSectionTitle">
+                <h4>4. Visit Details</h4>
+            </div>  
 
-                <label class="formLabel" style="text-align:center;">
-                    <h4>Validity Period</h4>
-                </label>
-                <div class="formMultiSelect">
-                    
-                    <input type="radio" type="radio" name="validityPeriod" id="vp1" checked>
-                    <label for="vp1">1 Week</label>
-                    
-                    <input type="radio" type="radio" name="validityPeriod" id="vp2">
-                    <label for="vp2">15 Days</label>
-                    
-                    <input type="radio" type="radio" name="validityPeriod" id="vp3">
-                    <label for="vp3">1 Month</label>
-                    
-                    <input type="radio" type="radio" name="validityPeriod" id="vp4">
-                    <label for="vp4">3 Months</label>
-                </div>
-
-                <label class="formLabel" style="text-align:center;">
-                    <h4>Re-entry</h4>
-                </label>
-                <div class="formMultiSelect"> 
-                    <input type="radio" type="radio" name="reEntry" id="rE1" checked>
-                    <label for="rE1">Single</label>
-                    
-                    <input type="radio" type="radio" name="reEntry" id="rE2">
-                    <label for="rE2">Multiple</label>
-                </div>
-
-                <label class="formLabel" style="text-align:center;">
-                    <h4>Single Traveler</h4>
-                </label>
-                <div class="formMultiSelect"> 
-                    <input type="radio" type="radio" name="singleTraveler" id="sT1" checked>
-                    <label for="sT1">Yes</label>
-
-                    <input type="radio" type="radio" name="singleTraveler" id="sT2">
-                    <label for="sT2">No</label>
-                </div>
+            <label class="formLabel" style="text-align:center;">
+                <h4>Validity Period</h4>
+            </label>
+            <div class="formMultiSelect">
                 
-                <div class="formSectionTitle">
-                    <h4>5. Visit Purpose: Tourism</h4>
-                </div>  
-                <label class="formLabel">
-                    <h4>Applicant professional activity sector</h4>
-                </label>
-                <input type="text">
+                <input type="radio" type="radio" name="validityPeriod" id="vp1" checked>
+                <label for="vp1">1 Week</label>
+                
+                <input type="radio" type="radio" name="validityPeriod" id="vp2">
+                <label for="vp2">15 Days</label>
+                
+                <input type="radio" type="radio" name="validityPeriod" id="vp3">
+                <label for="vp3">1 Month</label>
+                
+                <input type="radio" type="radio" name="validityPeriod" id="vp4">
+                <label for="vp4">3 Months</label>
+            </div>
 
-                <label class="formLabel">
-                    <h4>Intended Destinations</h4>
-                </label>
-                <div class="formMultiLineInput">
-                    <input style="flex:8" type="text" placeholder="Destination Name">
-                    <label class="formLabel">
-                        <h4>Days</h4>
-                    </label>
-                    <input style="flex:1; margin-left:5px;" type="number">
-                </div>
-                <div class="formMultiLineInput">
-                    <input style="flex:8" type="text" placeholder="Destination Name">
-                    <label class="formLabel">
-                        <h4>Days</h4>
-                    </label>
-                    <input style="flex:1; margin-left:5px;" type="number">
-                </div>
-                <div class="formMultiLineInput">
-                    <input style="flex:8" type="text" placeholder="Destination Name">
-                    <label class="formLabel">
-                        <h4>Days</h4>
-                    </label>
-                    <input style="flex:1; margin-left:5px;" type="number">
-                </div>
-                <div class="formMultiLineInput">
-                    <input style="flex:8" type="text" placeholder="Destination Name">
-                    <label class="formLabel">
-                        <h4>Days</h4>
-                    </label>
-                    <input style="flex:1; margin-left:5px;" type="number">
-                </div>
-                <div class="formMultiLineInput">
-                    <input style="flex:8" type="text" placeholder="Destination Name">
-                    <label class="formLabel">
-                        <h4>Days</h4>
-                    </label>
-                    <input style="flex:1; margin-left:5px;" type="number">
-                </div>
+            <label class="formLabel" style="text-align:center;">
+                <h4>Re-entry</h4>
+            </label>
+            <div class="formMultiSelect"> 
+                <input type="radio" type="radio" name="reEntry" id="rE1" checked>
+                <label for="rE1">Single</label>
+                
+                <input type="radio" type="radio" name="reEntry" id="rE2">
+                <label for="rE2">Multiple</label>
+            </div>
 
-                <div class="formSectionTitle">
-                    <h4>6. Visit Purpose: Emigration</h4>
-                </div>
-                <label class="formLabel">
-                    <h4>Activity sector in which employment is searched</h4>
-                </label>
-                <input type="text">
-                <label class="formLabel">
-                    <h4>Contact address</h4>
-                </label>
-                <input type="text">
+            <label class="formLabel" style="text-align:center;">
+                <h4>Single Traveler</h4>
+            </label>
+            <div class="formMultiSelect"> 
+                <input type="radio" type="radio" name="singleTraveler" id="sT1" checked>
+                <label for="sT1">Yes</label>
 
-                <div class="formSectionTitle">
-                    <h4>7. Visit Purpose: Other than tourism or emigration</h4>
-                </div>
-                <label class="formLabel">
-                    <h4>Intention description</h4>
-                </label>
-                <input type="text">
-                <label class="formLabel">
-                    <h4>Contact address</h4>
-                </label>
-                <input type="text">
-                <label class="formLabel">
-                    <h4>Permit reference number</h4>
-                </label>
-                <input type="text">
+                <input type="radio" type="radio" name="singleTraveler" id="sT2">
+                <label for="sT2">No</label>
+            </div>
+            
+            <div class="formSectionTitle">
+                <h4>5. Visit Purpose: Tourism</h4>
+            </div>  
+            <label class="formLabel">
+                <h4>Applicant professional activity sector</h4>
+            </label>
+            <input type="text">
 
-                <div class="formSectionTitle">
-                    <h4>8. Confirmation & Signature</h4>
-                </div>
+            <label class="formLabel">
+                <h4>Intended Destinations</h4>
+            </label>
+            <div class="formMultiLineInput">
+                <input style="flex:8" type="text" placeholder="Destination Name">
                 <label class="formLabel">
-                    <h4>Full Name</h4>
+                    <h4>Days</h4>
                 </label>
-                <input type="text">
+                <input style="flex:1; margin-left:5px;" type="number">
+            </div>
+            <div class="formMultiLineInput">
+                <input style="flex:8" type="text" placeholder="Destination Name">
+                <label class="formLabel">
+                    <h4>Days</h4>
+                </label>
+                <input style="flex:1; margin-left:5px;" type="number">
+            </div>
+            <div class="formMultiLineInput">
+                <input style="flex:8" type="text" placeholder="Destination Name">
+                <label class="formLabel">
+                    <h4>Days</h4>
+                </label>
+                <input style="flex:1; margin-left:5px;" type="number">
+            </div>
+            <div class="formMultiLineInput">
+                <input style="flex:8" type="text" placeholder="Destination Name">
+                <label class="formLabel">
+                    <h4>Days</h4>
+                </label>
+                <input style="flex:1; margin-left:5px;" type="number">
+            </div>
+            <div class="formMultiLineInput">
+                <input style="flex:8" type="text" placeholder="Destination Name">
+                <label class="formLabel">
+                    <h4>Days</h4>
+                </label>
+                <input style="flex:1; margin-left:5px;" type="number">
+            </div>
 
-                <div class="signatureForm">
-                    <label class="signature">
-                        <h4>Signature</h4>
-                    </label>
-                    <div id="signature"></div>
-                </div>
-                <button id="prePaymentFormEmpty" href="#prePayment">Digitally Sign Form</button>
-            </form>
-        </div>
+            <div class="formSectionTitle">
+                <h4>6. Visit Purpose: Emigration</h4>
+            </div>
+            <label class="formLabel">
+                <h4>Activity sector in which employment is searched</h4>
+            </label>
+            <input type="text">
+            <label class="formLabel">
+                <h4>Contact address</h4>
+            </label>
+            <input type="text">
+
+            <div class="formSectionTitle">
+                <h4>7. Visit Purpose: Other than tourism or emigration</h4>
+            </div>
+            <label class="formLabel">
+                <h4>Intention description</h4>
+            </label>
+            <input type="text">
+            <label class="formLabel">
+                <h4>Contact address</h4>
+            </label>
+            <input type="text">
+            <label class="formLabel">
+                <h4>Permit reference number</h4>
+            </label>
+            <input type="text">
+
+            <div class="formSectionTitle">
+                <h4>8. Confirmation & Signature</h4>
+            </div>
+            <label class="formLabel">
+                <h4>Full Name</h4>
+            </label>
+            <input type="text">
+
+            <div class="signatureForm">
+                <label class="signature">
+                    <h4>Signature</h4>
+                </label>
+                <div id="signature"></div>
+            </div>
+            <button id="prePaymentFormEmpty" href="#prePayment">Digitally Sign Form</button>
+        </form>
+    </div>
+
     </div>
 </div>
     <div id="prePayment" class="animatedModal prePayment">
-    <div class="modalHeader">
+    <div class="modalHeader prePayment">
     
-
         <i class="close-prePayment fal fa-chevron-left"></i>
     
     <div>
@@ -641,9 +644,10 @@
     </div>
     <i class="close-prePayment close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Please validate your identity</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Please validate your identity</h4>    
+    </div>
 
     <div class="verticalFlexFilled">
         <div class="verticalFlexFilled content">
@@ -672,33 +676,36 @@
             <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
         </div>
     </div>
+
+    </div>
 </div>
     <div id="paymentValidation" class="animatedModal paymentValidation">
-    <div class="modalHeader">
+    <div class="modalHeader paymentValidation">
     
-
         <i class="close-paymentValidation fal fa-chevron-left"></i>
     
     <div>
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Payment Validation</span>
     </div>
-    <i class="close-pa close-paymentValidation close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
+    <i class="close-paymentValidation close-prePayment close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Payment Validation</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Payment Validation</h4>    
+    </div>
 
     <div class="containerAction" id="visaApplicationFormEmpty" href="#visaApplication">
         <i class="fal fa-layer-plus"></i><h4>New Application</h4>
     </div>
+    
+    </div>
 </div>
 
     <div id="addDocument" class="animatedModal">
-    <div class="modalHeader">
+    <div class="modalHeader addDocument">
     
-
-        <i class="close-addDocument fal fa-chevron-left"></i>
+        <div></div>
     
     <div>
         <i class="fal fa-file-contract"></i>
@@ -706,14 +713,16 @@
     </div>
     <i class="close-addDocument fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Add document</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Add document</h4>    
+    </div>
 
+    </div>
 </div>
     
     <div id="newTransaction" class="animatedModal newTransaction">
-    <div class="modalHeader">
+    <div class="modalHeader newTransaction">
     
         <div></div>
     
@@ -723,22 +732,24 @@
     </div>
     <i class="close-newTransaction fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Choose a payment method</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Choose a payment method</h4>    
+    </div>
 
     <ul class="categorySelect">
         <li class="creditCard" id="newTransactionSendMoneyFormEmpty" href="#sendMoney"><i class="fal fa-credit-card"></i></i><h3>Send Money</h3></li>
         <li class="creditCard" id="newTransactionReceiveMoneyFormEmpty" href="#receiveMoney"><i class="fal fa-credit-card"></i></i><h3>Receive Money</h3></li>
         <li class="creditCard" id="newTransactionPayBillFormEmpty" href="#payBill"><i class="fal fa-credit-card"></i></i><h3>Pay Bill</h3></li>
     </ul>
+
+    </div>
 </div>
 
 
     <div id="sendMoney" class="animatedModal sendMoney">
-    <div class="modalHeader">
+    <div class="modalHeader sendMoney">
     
-
         <i class="close-sendMoney fal fa-chevron-left"></i>
     
     <div>
@@ -747,18 +758,20 @@
     </div>
     <i class="close-newTransaction close-sendMoney fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Send Money</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Send Money</h4>    
+    </div>
 
     <div class="containerAction" id="sendMoneyFormEmpty" href="#sendPaymentMethod">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
+
+    </div>
 </div>
     <div id="receiveMoney" class="animatedModal receiveMoney">
-    <div class="modalHeader">
+    <div class="modalHeader receiveMoney">
     
-
         <i class="close-receiveMoney fal fa-chevron-left"></i>
     
     <div>
@@ -767,18 +780,20 @@
     </div>
     <i class="close-newTransaction close-receiveMoney fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Receive Money</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Receive Money</h4>    
+    </div>
 
     <div class="containerAction" id="receiveMoneyFormEmpty" href="#receiveMoney">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
+
+    </div>
 </div>
     <div id="payBill" class="animatedModal payBill">
-    <div class="modalHeader">
+    <div class="modalHeader payBill">
     
-
         <i class="close-payBill fal fa-chevron-left"></i>
     
     <div>
@@ -787,19 +802,21 @@
     </div>
     <i class="close-newTransaction close-payBill fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Pay Bill</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Pay Bill</h4>    
+    </div>
 
     <div class="containerAction" id="payBillFormEmpty" href="#payBill">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
+
+    </div>
 </div>
 
     <div id="sendPaymentMethod" class="animatedModal sendPaymentMethod">
-    <div class="modalHeader">
+    <div class="modalHeader sendPaymentMethod">
     
-
         <i class="close-sendPaymentMethod fal fa-chevron-left"></i>
     
     <div>
@@ -808,18 +825,20 @@
     </div>
     <i class="close-newTransaction close-sendMoney close-sendPaymentMethod fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Payment Method</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Payment Method</h4>    
+    </div>
 
     <div class="containerAction" id="sendPaymentMethodFormEmpty" href="#sendRecipientInformation">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
+
+    </div>
 </div>
     <div id="sendRecipientInformation" class="animatedModal sendRecipientInformation">
-    <div class="modalHeader">
+    <div class="modalHeader sendRecipientInformation">
     
-
         <i class="close-sendRecipientInformation fal fa-chevron-left"></i>
     
     <div>
@@ -828,18 +847,20 @@
     </div>
     <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Recipient Information</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Recipient Information</h4>    
+    </div>
 
     <div class="containerAction" id="sendRecipientInformationFormEmpty" href="#sendAuthentication">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
+
+    </div>
 </div>
     <div id="sendAuthentication" class="animatedModal sendAuthentication">
-    <div class="modalHeader">
+    <div class="modalHeader sendAuthentication">
     
-
         <i class="close-sendAuthentication fal fa-chevron-left"></i>
     
     <div>
@@ -848,18 +869,20 @@
     </div>
     <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Send Authentication</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Send Authentication</h4>    
+    </div>
 
     <div class="containerAction" id="sendAuthenticationFormEmpty" href="#sendPaymentValidation">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
+
+    </div>
 </div>
     <div id="sendPaymentValidation" class="animatedModal sendPaymentValidation">
-    <div class="modalHeader">
+    <div class="modalHeader sendPaymentValidation">
     
-
         <i class="close-sendPaymentValidation fal fa-chevron-left"></i>
     
     <div>
@@ -868,18 +891,20 @@
     </div>
     <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication close-sendPaymentValidation fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Payment Validation</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Payment Validation</h4>    
+    </div>
 
     <div class="containerAction" id="sendPaymentValidationFormEmpty" href="#sendSuccess">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
+
+    </div>
 </div>
     <div id="sendSuccess" class="animatedModal sendSuccess">
-    <div class="modalHeader">
+    <div class="modalHeader sendSuccess">
     
-
         <i class="close-sendSuccess fal fa-chevron-left"></i>
     
     <div>
@@ -888,11 +913,15 @@
     </div>
     <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication close-sendPaymentValidation close-sendSuccess fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4>Send Success</h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Send Success</h4>    
+    </div>
+
     <div class="containerAction" id="sendSuccessFormEmpty" href="#sendSuccess">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    </div>
+
     </div>
 </div>
 
@@ -901,5 +930,6 @@
 <script src="js/signature.js"></script>
 <script src="js/animatedModal.js"></script>
 <script src="js/Main.js"></script>
+<script src="js/androidFunctions.js"></script>
 </body>
 </html>

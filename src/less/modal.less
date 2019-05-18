@@ -5,21 +5,21 @@
     border-top-right-radius:15px;
     background: linear-gradient(0deg, rgba(33,57,132,0.98) 0%, rgba(24,49,107,1) 100%);
     border:1px solid @lightBlue;
-    padding:15px;
     box-sizing: border-box;
     margin:8px;
     position:fixed;
+    overflow: hidden;
     top:0;
     right:0;
     bottom:0;
     left:0;
     &.travelCategory, &.sendMoney, &.receiveMoney, &.payBill {
         margin-top: 13px;
-        padding-bottom:28px;
+        padding-bottom: 13px;
     }
     &.visaApplication, &.sendPaymentMethod {
         margin-top: 18px;
-        padding-bottom:38px;
+        padding-bottom: 18px;
     }
     &.prePayment, &.sendRecipientInformation {
         margin-top: 23px;
@@ -42,4 +42,13 @@
 .modalHeader {
     display:flex;
     justify-content: space-between;
+    position: sticky;
+    padding: 15px;
+    z-index: 100;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.1)
+}
+
+.modalContent {
+    padding: 10px 15px 15px;
+    overflow: auto;
 }

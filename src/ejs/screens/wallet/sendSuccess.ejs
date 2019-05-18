@@ -1,6 +1,15 @@
 <div id="sendSuccess" class="animatedModal sendSuccess">
-    <%- include('ejs/include/navBar.ejs', { title: "Send Success", subTitle: "Send Success", closeClass: "sendSuccess", closeClasses: "close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication close-sendPaymentValidation close-sendSuccess" }) %>
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "Send Success",
+        subTitle: "Send Success",
+        identifier: "sendSuccess",
+        back: true,
+        closeClasses: "close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication close-sendPaymentValidation close-sendSuccess"
+    }) %>
+
     <div class="containerAction" id="sendSuccessFormEmpty" href="#sendSuccess">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
+
+    <% include ../../include/modalFooter.ejs %>
 </div>

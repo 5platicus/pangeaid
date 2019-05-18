@@ -27,7 +27,7 @@
             animatedIn:'fadeInUpBig',
             animatedOut:'fadeOutDownBig',
             animationDuration:'.6s', 
-            overflow:'auto', 
+            overflow:'hidden', 
             // Callbacks
             beforeOpen: function() {},           
             afterOpen: function() {}, 

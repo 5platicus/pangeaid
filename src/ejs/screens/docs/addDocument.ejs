@@ -1,4 +1,11 @@
 <div id="addDocument" class="animatedModal">
-    <%- include('ejs/include/navBar.ejs', { title: "New Document", subTitle: "Add document", closeClass: "addDocument", closeClasses: "close-addDocument" }) %>
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "New Document",
+        subTitle: "Add document",
+        back: false,
+        identifier: "addDocument",
+        closeClasses: "close-addDocument"
+    }) %>
 
+    <% include ../../include/modalFooter.ejs %>
 </div>

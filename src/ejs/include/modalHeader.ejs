@@ -1,7 +1,6 @@
-<div class="modalHeader">
-    <% if (closeClass) { %>
-
-        <i class="close-<%= closeClass %> fal fa-chevron-left"></i>
+<div class="modalHeader <%= identifier %>">
+    <% if (back) { %>
+        <i class="close-<%= identifier %> fal fa-chevron-left"></i>
     <% } else { %>
         <div></div>
     <% } %>
@@ -11,6 +10,7 @@
     </div>
     <i class="<%= closeClasses %> fal fa-times-circle"></i>
 </div>
-<div class="formTitle">
-    <h4><%= subTitle %></h4>    
-</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4><%= subTitle %></h4>    
+    </div>

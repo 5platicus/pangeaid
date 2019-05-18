@@ -1,5 +1,11 @@
 <div id="applicationCategories" class="animatedModal">
-    <%- include('ejs/include/navBar.ejs', { title: "New Application", subTitle: "Select a category", closeClass: "", closeClasses: "close-applicationCategories" }) %>
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "New Application",
+        subTitle: "Select a category",
+        identifier: "applicationCategories",
+        back: false,
+        closeClasses: "close-applicationCategories"
+    }) %>
 
     <div class="verticalFlexFilled">
     <ul class="categorySelect">
@@ -13,4 +19,6 @@
         <li><i class="fal fa-balance-scale"></i><h3>Legal</h3></li>
     </ul>
     </div>
+
+    <% include ../../include/modalFooter.ejs %>
 </div>

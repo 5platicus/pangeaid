@@ -1,5 +1,11 @@
 <div id="prePayment" class="animatedModal prePayment">
-    <%- include('ejs/include/navBar.ejs', { title: "Pre Payment", subTitle: "Please validate your identity", closeClass: "prePayment", closeClasses: "close-prePayment close-visaApplication close-travelCategory close-applicationCategories" }) %>
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "Pre Payment",
+        subTitle: "Please validate your identity",
+        identifier: "prePayment",
+        back: true,
+        closeClasses: "close-prePayment close-visaApplication close-travelCategory close-applicationCategories"
+    }) %>
 
     <div class="verticalFlexFilled">
         <div class="verticalFlexFilled content">
@@ -28,4 +34,6 @@
             <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
         </div>
     </div>
+
+    <% include ../../include/modalFooter.ejs %>
 </div>

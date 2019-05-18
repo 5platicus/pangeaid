@@ -1,5 +1,11 @@
 <div id="travelCategory" class="animatedModal travelCategory">
-    <%- include('ejs/include/navBar.ejs', { title: "Travel Category", subTitle: "Travel Category", closeClass: "travelCategory", closeClasses: "", closeClasses: "close-travelCategory close-applicationCategories" }) %>
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "Travel Category",
+        subTitle: "Travel Category",
+        identifier: "travelCategory",
+        back: true,
+        closeClasses: "close-travelCategory close-applicationCategories"
+    }) %>
 
     <ul class="innerCategorySelect">
         <li>Form 112A - Customs</li>
@@ -15,4 +21,6 @@
         <li>Form 442B - Insurance</li>
         <li>Form B-343 - Debt Payment</li>
     </ul>
+
+    <% include ../../include/modalFooter.ejs %>
 </div>
