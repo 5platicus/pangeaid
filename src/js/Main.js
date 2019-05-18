@@ -43,10 +43,11 @@ $(document).ready(function() {
     $('.back-paymentValidation').on('click', function() {
         resetSignature();
     });
-    $('#displayQREmptyForm').on('click', function() {
-        setTimeout(function() {
-            showAlertSuccess( "Successful transaction",  "Successful transaction");
-        }, 10000)
+    $('#docsQRCodeClick').on('click', function() {
+        showAlertSuccess( "Successful scanned",  "Successful scanned");
+    });
+    $('#receiveQRPress').on('click', function() {
+        showAlertSuccess( "Successful transaction",  "Successful transaction");
     });
     $('#sendPaymentValidationFormEmpty').on('click', function() {
         showAlertSuccess( "Successful transaction",  "Successful transaction");
