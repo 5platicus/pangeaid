@@ -40,12 +40,11 @@
         
         var closeBt = $('.close-'+settings.modalTarget);
 
-        //console.log(closeBt)
+        var backBt = $('.back-'+settings.modalTarget);
 
         var href = $(modal).attr('href'),
             id = $('body').find('#'+settings.modalTarget),
             idConc = '#'+id.attr('id');
-            //console.log(idConc);
             // Default Classes
             id.addClass('animated');
             id.addClass(settings.modalTarget+'-off');
@@ -95,8 +94,46 @@
         closeBt.click(function(event) {
             event.preventDefault();
             $('body, html').css({'overflow':'auto'});
+            if (settings.beforeClose()) {
+                settings.beforeClose().then((res) => {
+                    result = res;
+                    if (res) {
+                        let classList = $(this).attr('class').split(/\s+/);
+                        $.each(classList, function(index, item) {
+                            if (item.toLowerCase().indexOf('close-') >= 0) {
+                                let selector = item.replace('close-','');
+                                if ($('#' + selector).hasClass(selector+'-on')) {
+                                    $('#' + selector).removeClass(selector+'-on');
+                                    $('#' + selector).addClass(selector+'-off');
+                                } 
+                    
+                                if ($('#' + selector).hasClass(selector+'-off')) {
+                                    $('#' + selector).removeClass(selector);
+                                    $('#' + selector).addClass(selector);
+                                    $('#' + selector).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterClose);
+                                    $('#' + selector).css({'z-index':settings.zIndexOut});
+                                };
+                            }
+                        });
+                    }
+                });
+            } else {
+                if (id.hasClass(settings.modalTarget+'-on')) {
+                    id.removeClass(settings.modalTarget+'-on');
+                    id.addClass(settings.modalTarget+'-off');
+                } 
+    
+                if (id.hasClass(settings.modalTarget+'-off')) {
+                    id.removeClass(settings.animatedIn);
+                    id.addClass(settings.animatedOut);
+                    id.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterClose);
+                };
+            }
+        });
 
-            settings.beforeClose(); //beforeClose
+        backBt.click(function(event) {
+            event.preventDefault();
+            $('body, html').css({'overflow':'auto'});
             if (id.hasClass(settings.modalTarget+'-on')) {
                 id.removeClass(settings.modalTarget+'-on');
                 id.addClass(settings.modalTarget+'-off');
@@ -107,7 +144,6 @@
                 id.addClass(settings.animatedOut);
                 id.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterClose);
             };
-
         });
 
         function afterClose () {       

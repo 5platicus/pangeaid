@@ -11,25 +11,37 @@ $( document ).ready(function() {
  * MODAL ROUTES INITIALIZATION
 */
 function initializeModals() {
+
+    let options = {
+        beforeClose: function beforeModalClose() {
+            return swal({
+                title: "Are you sure?",
+                text: "Are you sure you want to go the root screen.",
+                buttons: true,
+                dangerMode: true
+            });
+        }
+    }
+
     $("#govFormEmpty").animatedModal();
-    $("#travelCategoryFormEmpty").animatedModal();
-    $("#visaApplicationFormEmpty").animatedModal();
-    $("#prePaymentFormEmpty").animatedModal();
-    $("#paymentValidationFormEmpty").animatedModal();
+    $("#travelCategoryFormEmpty").animatedModal(options);
+    $("#visaApplicationFormEmpty").animatedModal(options);
+    $("#prePaymentFormEmpty").animatedModal(options);
+    $("#paymentValidationFormEmpty").animatedModal(options);
 
     $("#docsFormEmpty").animatedModal();
 
     $("#walletFormEmpty").animatedModal();
     $("#newTransactionSendMoneyFormEmpty").animatedModal();
-    $("#newTransactionReceiveMoneyFormEmpty").animatedModal();
-    $("#newTransactionPayBillFormEmpty").animatedModal();
+    $("#newTransactionReceiveMoneyFormEmpty").animatedModal(options);
+    $("#newTransactionPayBillFormEmpty").animatedModal(options);
 
-    $("#sendMoneyFormEmpty").animatedModal();
-    $("#sendPaymentMethodFormEmpty").animatedModal();
-    $("#sendRecipientInformationFormEmpty").animatedModal();
-    $("#sendAuthenticationFormEmpty").animatedModal();
-    $("#sendPaymentValidationFormEmpty").animatedModal();
-    $("#sendSuccessFormEmpty").animatedModal();
+    $("#sendMoneyFormEmpty").animatedModal(options);
+    $("#sendPaymentMethodFormEmpty").animatedModal(options);
+    $("#sendRecipientInformationFormEmpty").animatedModal(options);
+    $("#sendAuthenticationFormEmpty").animatedModal(options);
+    $("#sendPaymentValidationFormEmpty").animatedModal(options);
+    $("#sendSuccessFormEmpty").animatedModal(options);
 }
 
 /**
@@ -37,22 +49,26 @@ function initializeModals() {
  * availableTabs - routes
  * onClick functionality
 */
+let currentTab = '';
 function tabNavigation() {
     let availableTabs = {
         govLink: {
             id: '#gov',
             title: 'MY GOV',
             icon: 'fa-landmark',
+            nav: 'first',
         },
         docsLink: {
             id: '#docs',
             title: 'MY DOCS',
             icon: 'fa-id-card',
+            nav: 'second',
         },
         walletLink: {
             id: '#wallet',
             title: 'MY WALLET',
             icon: 'fa-wallet',
+            nav: 'third',
         },
     };
     $('.tabLink').on('click', function() {
@@ -64,6 +80,15 @@ function tabNavigation() {
             if (val.id === tab) {
                 $(val.id).show();
                 $(val.id).css('display', 'inline-flex');
+                $('.nav').attr('class', 'nav selected ' + currentTab);
+                setTimeout(function () {
+                    $('.nav').attr('class', 'nav selected ' + val.nav);
+                }, 200) 
+                setTimeout(function () {
+                    $('.nav').attr('class', 'nav ' + val.nav);
+                    currentTab = val.nav;
+                }, 400);
+                
                 $('#screenTitle').text(val.title);
                 $("#screenIcon").attr('class', 'fa ' + val.icon);
             } else {
