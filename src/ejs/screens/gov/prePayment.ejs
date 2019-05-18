@@ -8,23 +8,11 @@
     }) %>
 
     <div class="verticalFlexFilled">
-        <div class="verticalFlexFilled content">
+        <div class="verticalFlexFilled validationContent">
             <h3>Visa Application Form</h3>
-            <ul class="radioList verticalFlexFilled" style="justify-content: space-around;">
-                <li>
-                    <input type="radio" name="paymentType" id="pT1" checked>
-                    <label for="pT1">Wallet (Balance: $214.23)</label>
-                </li>
-                <li>
-                    <input type="radio" name="paymentType" id="pT2">
-                    <label for="pT2">Credit Card</label>
-                </li>
-                <li>
-                    <input type="radio" name="paymentType" id="pT3">
-                    <label for="pT3">Bank Transfer</label>
-                </li>
-            </ul>
-            <h3 style="margin-left:auto;">$18.00</h3>
+            <p>If applicable, payment for this transaction will be deducted from your wallet balance ($214.26), the total amount for this form is:</p>
+            <h2 style="margin:0 auto;">$18.00</h2>
+            <image id="signatureImage" class="signatureImage" src="" />
         </div>
         <ul class="categorySelect">
             <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>

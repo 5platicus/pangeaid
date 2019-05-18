@@ -66,8 +66,8 @@ function initializeModals() {
     let options = {
         beforeClose: function beforeModalClose() {
             return swal({
-                title: "Are you sure?",
-                text: "Are you sure you want to go the root screen.",
+                title: "Warning",
+                text: "Closing this window will delete your progress. Are you sure that you would like to close it?",
                 buttons: true,
                 dangerMode: true
             });
@@ -138,7 +138,7 @@ function tabNavigation() {
                 bounce.translate({
                     from: { x: x, y: 0 },
                     to: { x: 0, y: 0 },
-                    duration: 1000,
+                    duration: 500,
                     stiffness: 2,
                 }).applyTo(document.querySelectorAll(".animation-target"));
                 
@@ -151,7 +151,11 @@ function tabNavigation() {
                 }, 100) 
                 setTimeout(function () {
                     $('.nav').attr('class', 'nav ' + val.nav);
+<<<<<<< Updated upstream
                     currentNav = val.nav;
+=======
+                    currentTab = val.nav;
+>>>>>>> Stashed changes
                 }, 200);
                 
                 $('#screenTitle').text(val.title);
