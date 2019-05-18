@@ -183,4 +183,5 @@ function resetSignature() {
 }
 function resetIdentityValidation(){
     $('#paymentValidationFormEmpty').attr('class', 'containerAction disabledAction')
+    $('#sendAuthenticationFormEmpty').attr('class', 'containerAction disabledAction')
 };

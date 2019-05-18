@@ -3,15 +3,12 @@
  * in p_fingerprint comment how to enable it for android hook
 */
 function fingerprint(sResult) {
-    let button = $('#paymentValidationFormEmpty');
     if (sResult) {
-        button.removeClass('falseAction');
-        button.removeClass('disabledAction');
-        button.addClass('enabledAction');
+        $('#paymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
     } else {
-        button.removeClass('enabledAction');
-        button.addClass('disabledAction');
-        button.addClass('falseAction');
+        $('#paymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
     }
 }
 function p_fingerprint() {
@@ -24,25 +21,40 @@ function p_fingerprint() {
  * in p_fingerprint comment how to enable it for android hook
 */
 function facerecognition(sResult) {
-    let button = $('#paymentValidationFormEmpty');
     if (sResult) {
-        button.removeClass('falseAction');
-        button.removeClass('disabledAction');
-        button.addClass('enabledAction');
+        $('#paymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
     } else {
-        button.removeCalass('enabledAction');
-        button.addClass('falseAction');
+        $('#paymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
     }
 }
 function p_facerecognition() {
     // p_facerecognition() => window.location='p_facerecognition'
-    faceRecognition(true);
+    facerecognition(true);
 }
 
 function addcard(sResult) {
-    alert("addcard result:" + sResult);
+    if (sResult) {
+        let length = $('#sendPaymentMethodCategories').children().length;
+        $("<li class='creditCard' id='sendRecipientInformationFormEmpty" + length + "' href='#sendRecipientInformation'><div><i class='fal fa-credit-card'></i></i><h3>Card number</h3></div><h4>4242 4242 424242 4242</h4></li>").insertBefore('#sendAddCard');
+        $("#sendRecipientInformationFormEmpty" + length).animatedModal();
+    } else {
+        // do action
+    }
+}
+function p_addcard() {
+    // p_addcard() => window.location='p_addcard'
+    addcard(true);
 }
 
+
 function scanandpay(sResult) {
-    alert("scanandpay result:" + sResult);
+    if (sResult) {
+        $('[data-profile="recipientName"]').val('Rakotomalala Miora');
+        $('[data-profile="amount"]').val('$12.43');
+    }
+}
+function p_scanandpay() {
+    scanandpay(true);
 }

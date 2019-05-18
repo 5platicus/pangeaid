@@ -790,9 +790,16 @@
         <h4>Payment Method</h4>    
     </div>
 
-    <div class="containerAction" id="sendRecipientInformationFormEmpty" href="#sendRecipientInformation">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
-    </div>
+    <ul class="categorySelect" id="sendPaymentMethodCategories">
+        <li class="creditCard" id="sendRecipientInformationFormEmpty" href="#sendRecipientInformation">
+            <div>
+                <i class="fal fa-credit-card"></i></i><h3>Wallet</h3>
+            </div>
+            <h4>Balance: $214.23</h4>
+            <br />
+        </li>
+        <li id="sendAddCard" class="creditCard" onclick="p_addcard()"><i class="fal fa-credit-card"></i></i><h3>Add credit card</h3></li>
+    </ul>
 
     </div>
 </div>
@@ -812,6 +819,23 @@
         <h4>Recipient Information</h4>    
     </div>
 
+    <div class="generalForm">  
+        <form class="" action="">
+            <label class="amount">
+                <h4>Amount</h4>
+            </label>
+            <input type="text" data-profile="amount" />
+            <label class="recipientName">
+                <h4>Recipient name</h4>
+            </label>
+            <input type="text" data-profile="recipientName">
+        </form>
+    </div>
+    <br />
+    <div class="containerAction" onclick="p_scanandpay()">
+        <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
+    </div>
+    <br />
     <div class="containerAction" id="sendAuthenticationFormEmpty" href="#sendAuthentication">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
@@ -834,10 +858,19 @@
         <h4>Send Authentication</h4>    
     </div>
 
-    <div class="containerAction" id="sendPaymentValidationFormEmpty" href="#sendPaymentValidation">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    <div>
+        <h4>Rakotomalala Miora</h4>
+        <h4>Amount: $12.43</h4>
     </div>
 
+    <ul class="categorySelect">
+        <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+        <li onclick="p_fingerprint()"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+    </ul>
+    <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty" href="#sendPaymentValidation">
+        <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
+    </div>
+    
     </div>
 </div>
     <div id="sendPaymentValidation" class="animatedModal sendPaymentValidation">
