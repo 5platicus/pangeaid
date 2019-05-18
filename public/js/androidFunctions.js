@@ -68,7 +68,7 @@ function p_facerecognition(current) {
 function addcard(sResult) {
     if (sResult) {
         let length = $('#sendPaymentMethodCategories').children().length;
-        $("<li class='creditCard' id='sendRecipientInformationFormEmpty" + length + "' href='#sendRecipientInformation'><div><i class='fal fa-credit-card'></i></i><h3>Card number</h3></div><h4>4242 4242 424242 4242</h4></li>").insertBefore('#sendAddCard');
+        $("<li class='creditCard' id='sendRecipientInformationFormEmpty" + length + "' href='#sendRecipientInformation'><div><i class='fal fa-credit-card'></i></i><h3>Card number</h3></div><h4>4200 5541 4532 1137</h4></li>").insertBefore('#sendAddCard');
         $("#sendRecipientInformationFormEmpty" + length).animatedModal();
     }
 }
@@ -84,6 +84,6 @@ function scanandpay(sResult) {
     }
 }
 function p_scanandpay() {
-    window.location='p_addcard'
+    window.location='p_scanandpay'
     //scanandpay(true);
 }

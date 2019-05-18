@@ -195,8 +195,8 @@ function pastDummyProfile() {
     $('[data-profile="profilePic"]').css('background-size', 'cover');
 }
 function pasteScanAndPay() {
-    $('[data-profile="recipientName"]').val('Rakotomalala Miora');
-    $('[data-profile="recipientEmail"]').val('rakotomalala.miora@gmail.com');
+    $('[data-profile="recipientName"]').val('Aina Rakotonirina');
+    $('[data-profile="recipientEmail"]').val('aina.rakotonirina@gmail.com');
 }
 
 function saveSignature() {
