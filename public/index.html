@@ -164,7 +164,7 @@
                         </div>
                     </div>
                     <ul class="docsMenu">
-                        <li><i class="fal fa-qrcode"></i><h4>Show Code</h4></li>
+                        <li id="displayDocQREmptyForm" href="#displayDocQR"><i class="fal fa-qrcode"></i><h4>Show Code</h4></li>
                         <li><i class="fal fa-share-square"></i><h4>Share ID</h4></li>
                         <li id="trash"><i class="fal fa-trash-alt" style="color:#ED2631;"></i></li>
                     </ul>
@@ -653,7 +653,6 @@
     </div>
 
     <div class="verticalFlexFilled">
-        
         <div class="verticalFlexFilled validationContent">
             <div>
                 <h4>Payment For</h4>
@@ -664,16 +663,16 @@
                 <h3>If applicable, payment for this transaction will be deducted from your wallet balance ($214.26), the total amount for this form is:</h3>
             </div>
             <span class="totalAmount">Amount: <span class="totalAmountNumber">$18.00</span></span>
-            <!-- <image id="signatureImage" class="signatureImage" src="" /> -->
         </div>
+
         <div>
             <ul class="categorySelect">
-                <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
-                <li onclick="p_fingerprint()"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+                <li onclick="window.location='p_facerecognition'"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+                <li onclick="window.location='p_fingerprint'"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
             </ul>
-        </div>
-        <div class="containerAction disabledAction" id="paymentValidationFormEmpty">
-            <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
+            <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty">
+                <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
+            </div>
         </div>
     </div>
 
@@ -694,6 +693,30 @@
 <div class="modalContent">
     <div class="formTitle">
         <h4>Add document</h4>    
+    </div>
+
+    </div>
+</div>
+    <div id="displayDocQR" class="animatedModal displayQR">
+    <div class="modalHeader displayDocQR">
+    
+        <i class="back-displayDocQR fal fa-chevron-left"></i>
+    
+    <div>
+        <i class="fal fa-file-contract"></i>
+        <span class="modalTitle">Driver&#39;s License</span>
+    </div>
+    <i class="close-displayDocQR fal fa-times-circle"></i>
+</div>
+<div class="modalContent">
+    <div class="formTitle">
+        <h4>Show this QR code to share your document</h4>    
+    </div>
+    
+    <div class="verticalFlexFilled">
+        <div class="qrCodeContainer">
+            <image id="qrCodeImage" class="qrCodeImage" src="assets/images/qrcode.png" />
+        </div>
     </div>
 
     </div>
@@ -750,7 +773,7 @@
 
     </div>
 </div>
-
+    
     <div id="sendPaymentMethod" class="animatedModal sendPaymentMethod">
     <div class="modalHeader sendPaymentMethod">
     
@@ -774,7 +797,7 @@
             </div>
             <h4>Balance: $214.23</h4>
         </li>
-        <li id="sendAddCard" onclick="p_addcard()"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
+        <li id="sendAddCard" onclick="window.location='p_addcard'"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
     </ul>
 
     </div>
@@ -856,8 +879,8 @@
 
         <div>
             <ul class="categorySelect">
-                <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
-                <li onclick="p_fingerprint()"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+                <li onclick="window.location='p_facerecognition'"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+                <li onclick="window.location='p_fingerprint'"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
             </ul>
             <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty">
                 <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>

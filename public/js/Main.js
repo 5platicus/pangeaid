@@ -51,12 +51,12 @@ $(document).ready(function() {
     $('#sendPaymentValidationFormEmpty').on('click', function() {
         showAlertSuccess( "Successful transaction",  "Successful transaction");
     });
-    $('#paymentValidationFormEmpty').on('click', function() {
-        showAlertSuccess( "Successful transaction",  "Successful transaction");
-    });
-    $('#payPaymentValidationFormEmpty').on('click', function() {
-        showAlertSuccess( "Successful transaction",  "Successful transaction");
-    });
+    // $('#paymentValidationFormEmpty').on('click', function() {
+    //     showAlertSuccess( "Successful transaction",  "Successful transaction");
+    // });
+    // $('#payPaymentValidationFormEmpty').on('click', function() {
+    //     showAlertSuccess( "Successful transaction",  "Successful transaction");
+    // });
 });
 
 /**
@@ -80,9 +80,10 @@ function initializeModals() {
     $("#prePaymentFormEmpty").animatedModal(options);
 
     $("#docsFormEmpty").animatedModal();
-
+    
     $("#walletFormEmpty").animatedModal();
 
+    $("#displayDocQREmptyForm").animatedModal();
     $("#displayQREmptyForm").animatedModal(options);
     $("#sendPaymentMethodFormEmpty").animatedModal(options);
     $("#sendRecipientInformationFormEmpty").animatedModal(options);

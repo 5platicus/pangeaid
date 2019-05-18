@@ -1,0 +1,17 @@
+<div id="displayDocQR" class="animatedModal displayQR">
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "Driver's License",
+        subTitle: "Show this QR code to share your document",
+        identifier: "displayDocQR",
+        back: true,
+        closeClasses: "close-displayDocQR"
+    }) %>
+    
+    <div class="verticalFlexFilled">
+        <div class="qrCodeContainer">
+            <image id="qrCodeImage" class="qrCodeImage" src="assets/images/qrcode.png" />
+        </div>
+    </div>
+
+    <% include ../../include/modalFooter.ejs %>
+</div>
