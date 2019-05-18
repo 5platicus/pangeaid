@@ -1,4 +1,5 @@
-$( document ).ready(function() {
+
+$(document).ready(function() {
     initializeModals();
     tabNavigation();
     $('#signature').signature();
@@ -29,7 +30,6 @@ $( document ).ready(function() {
     $('#paymentValidationFormEmpty').on('click', function() {
         loadSignature();
     })
-    
     /**
      * RESETING SCREENS ON BACK PRESS
     */
@@ -87,7 +87,8 @@ function initializeModals() {
  * availableTabs - routes
  * onClick functionality
 */
-let currentTab = '';
+let currentNav = 'first';
+let currentTab = 'govLink';
 function tabNavigation() {
     let availableTabs = {
         govLink: {
@@ -109,6 +110,7 @@ function tabNavigation() {
             nav: 'third',
         },
     };
+
     $('.tabLink').on('click', function() {
         let tab = $(this).data("id");
         $(".tabLink").removeClass("current");
@@ -116,15 +118,30 @@ function tabNavigation() {
         
         $.each(availableTabs, function(key, val) {
             if (val.id === tab) {
+                let nextIndex = Object.keys(availableTabs).indexOf(key);
+                let currentIndex =  Object.keys(availableTabs).indexOf(currentTab);
+                let bounce = new Bounce();
+                let x = 300;
+                if (nextIndex < currentIndex) {
+                    x = -300
+                }
+                bounce.translate({
+                    from: { x: x, y: 0 },
+                    to: { x: 0, y: 0 },
+                    duration: 1000,
+                    stiffness: 2,
+                }).applyTo(document.querySelectorAll(".animation-target"));
+                
+                currentTab = key;
                 $(val.id).show();
                 $(val.id).css('display', 'inline-flex');
-                $('.nav').attr('class', 'nav selected ' + currentTab);
+                $('.nav').attr('class', 'nav selected ' + currentNav);
                 setTimeout(function () {
                     $('.nav').attr('class', 'nav selected ' + val.nav);
                 }, 200) 
                 setTimeout(function () {
                     $('.nav').attr('class', 'nav ' + val.nav);
-                    currentTab = val.nav;
+                    currentNav = val.nav;
                 }, 400);
                 
                 $('#screenTitle').text(val.title);
