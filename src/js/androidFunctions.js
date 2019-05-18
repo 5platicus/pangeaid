@@ -11,6 +11,8 @@ function fingerprint(sResult) {
             $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
         } else if (currentScreen === 'walletPay') {
             $('#payPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        } else if (currentScreen === 'docsAuthentication') {
+            $('#displayDocQREmptyForm').attr('class', 'containerAction enabledAction');
         }
     } else {
         if (currentScreen === 'govPayment') {
@@ -19,6 +21,8 @@ function fingerprint(sResult) {
             $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
         } else if (currentScreen === 'walletPay') {
             $('#payPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        } else if (currentScreen === 'docsAuthentication') {
+            $('#displayDocQREmptyForm').attr('class', 'containerAction falseAction');
         }
     }
 }
@@ -40,6 +44,8 @@ function facerecognition(sResult) {
             $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
         } else if (currentScreen === 'walletPay') {
             $('#payPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        } else if (currentScreen === 'docsAuthentication') {
+            $('#displayDocQREmptyForm').attr('class', 'containerAction enabledAction');
         }
     } else {
         if (currentScreen === 'govPayment') {
@@ -48,6 +54,8 @@ function facerecognition(sResult) {
             $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
         } else if (currentScreen === 'walletPay') {
             $('#payPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        } else if (currentScreen === 'docsAuthentication') {
+            $('#displayDocQREmptyForm').attr('class', 'containerAction falseAction');
         }
     }
 }
@@ -62,13 +70,11 @@ function addcard(sResult) {
         let length = $('#sendPaymentMethodCategories').children().length;
         $("<li class='creditCard' id='sendRecipientInformationFormEmpty" + length + "' href='#sendRecipientInformation'><div><i class='fal fa-credit-card'></i></i><h3>Card number</h3></div><h4>4242 4242 424242 4242</h4></li>").insertBefore('#sendAddCard');
         $("#sendRecipientInformationFormEmpty" + length).animatedModal();
-    } else {
-        // do action
     }
 }
 function p_addcard() {
-    // p_addcard() => window.location='p_addcard'
-    addcard(true);
+    window.location='p_addcard'
+    // addcard(true);
 }
 
 
@@ -78,5 +84,6 @@ function scanandpay(sResult) {
     }
 }
 function p_scanandpay() {
-    scanandpay(true);
+    window.location='p_addcard'
+    // scanandpay(true);
 }

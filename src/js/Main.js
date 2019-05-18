@@ -51,12 +51,19 @@ $(document).ready(function() {
     $('#sendPaymentValidationFormEmpty').on('click', function() {
         showAlertSuccess( "Successful transaction",  "Successful transaction");
     });
-    // $('#paymentValidationFormEmpty').on('click', function() {
-    //     showAlertSuccess( "Successful transaction",  "Successful transaction");
-    // });
-    // $('#payPaymentValidationFormEmpty').on('click', function() {
-    //     showAlertSuccess( "Successful transaction",  "Successful transaction");
-    // });
+    $('#paymentValidationFormEmpty').on('click', function() {
+        showAlertSuccess( "Successful transaction",  "Successful transaction");
+    });
+    $('#payPaymentValidationFormEmpty').on('click', function() {
+        showAlertSuccess( "Successful transaction",  "Successful transaction");
+    });
+
+    $('.back-docsAuthentication').on('click', function() {
+        resetIdentityValidation()
+    })
+    $('.close-docsAuthentication').on('click', function() {
+        resetIdentityValidation()
+    })
 });
 
 /**
@@ -233,6 +240,8 @@ function resetSignature() {
 function resetIdentityValidation(){
     $('#paymentValidationFormEmpty').attr('class', 'containerAction disabledAction')
     $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction disabledAction')
+    $('#payPaymentValidationFormEmpty').attr('class', 'containerAction disabledAction')
+    $('#displayDocQREmptyForm').attr('class', 'containerAction disabledAction')
 };
 
 function showAlertSuccess(title, text) {

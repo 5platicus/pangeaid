@@ -667,10 +667,10 @@
 
         <div>
             <ul class="categorySelect">
-                <li onclick="window.location='p_facerecognition'"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
-                <li onclick="window.location='p_fingerprint'"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+                <li onclick="p_facerecognition('govPayment')"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+                <li onclick="p_fingerprint('govPayment')"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
             </ul>
-            <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty">
+            <div class="containerAction disabledAction" id="paymentValidationFormEmpty">
                 <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
             </div>
         </div>
@@ -718,8 +718,8 @@
         <div></div>
         <div>
             <ul class="categorySelect">
-                <li onclick="window.location='p_facerecognition'"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
-                <li onclick="window.location='p_fingerprint'"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+                <li onclick="p_facerecognition('docsAuthentication')"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+                <li onclick="p_fingerprint('docsAuthentication')"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
             </ul>
             <div class="containerAction disabledAction" id="displayDocQREmptyForm" href="#displayDocQR">
                 <i class="fal fa-money-bill-wave"></i><h4>Next</h4>
@@ -829,7 +829,7 @@
             </div>
             <h4>Balance: $214.23</h4>
         </li>
-        <li id="sendAddCard" onclick="window.location='p_addcard'"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
+        <li id="sendAddCard" onclick="p_addcard()"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
     </ul>
 
     </div>
@@ -868,7 +868,7 @@
             </form>
         </div>
         <div>
-            <div class="containerAction" onclick="window.location='p_scanandpay'">
+            <div class="containerAction" onclick="p_scanandpay()">
                 <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
             </div>
             <br />
@@ -911,8 +911,8 @@
 
         <div>
             <ul class="categorySelect">
-                <li onclick="window.location='p_facerecognition'"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
-                <li onclick="window.location='p_fingerprint'"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+                <li onclick="p_facerecognition('walletSend')"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+                <li onclick="p_fingerprint('walletSend')"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
             </ul>
             <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty">
                 <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
