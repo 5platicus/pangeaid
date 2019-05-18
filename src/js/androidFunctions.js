@@ -1,36 +1,59 @@
 /**
  * functions for fingerprint
- * in p_fingerprint comment how to enable it for android hook
+ * in p_fingerprint - uncomment line and comment the next line to enable hooks
 */
+let currentScreen = '';
 function fingerprint(sResult) {
     if (sResult) {
-        $('#paymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
-        $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        if(currentScreen === 'govPayment') {
+            $('#paymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        } else if (currentScreen === 'walletSend') {
+            $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        } else if (currentScreen === 'walletPay') {
+            $('#payPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        }
     } else {
-        $('#paymentValidationFormEmpty').attr('class', 'containerAction falseAction');
-        $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        if (currentScreen === 'govPayment') {
+            $('#paymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        } else if (currentScreen === 'walletSend') {
+            $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        } else if (currentScreen === 'walletPay') {
+            $('#payPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        }
     }
 }
-function p_fingerprint() {
-    // p_fingerprint() => window.location='p_fingerprint'
+function p_fingerprint(current) {
+    currentScreen = current;
+    // window.location='p_fingerprint'
     fingerprint(true);
 }
 
 /**
  * functions for face recognition
- * in p_fingerprint comment how to enable it for android hook
+ * in p_facerecognition - uncomment line and comment the next line to enable hooks
 */
 function facerecognition(sResult) {
     if (sResult) {
-        $('#paymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
-        $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        if(currentScreen === 'govPayment') {
+            $('#paymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        } else if (currentScreen === 'walletSend') {
+            $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        } else if (currentScreen === 'walletPay') {
+            $('#payPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
+        }
     } else {
-        $('#paymentValidationFormEmpty').attr('class', 'containerAction falseAction');
-        $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        if (currentScreen === 'govPayment') {
+            $('#paymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        } else if (currentScreen === 'walletSend') {
+            $('#sendPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        } else if (currentScreen === 'walletPay') {
+            $('#payPaymentValidationFormEmpty').attr('class', 'containerAction falseAction');
+        }
     }
 }
-function p_facerecognition() {
-    // p_facerecognition() => window.location='p_facerecognition'
+function p_facerecognition(current) {
+    currentScreen = current;
+    // window.location='p_facerecognition'
     facerecognition(true);
 }
 

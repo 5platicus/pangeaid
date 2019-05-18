@@ -136,20 +136,20 @@ function tabNavigation() {
             if (val.id === tab) {
                 let nextIndex = Object.keys(availableTabs).indexOf(key);
                 let currentIndex =  Object.keys(availableTabs).indexOf(currentTab);
-                let bounce = new Bounce();
-                let x = 300;
-                if (nextIndex < currentIndex) {
-                    x = -300
-                }
-                bounce.translate({
-                    from: { x: x, y: 0 },
-                    to: { x: 0, y: 0 },
-                    duration: 500,
-                    stiffness: 2,
-                }).applyTo(document.querySelectorAll(".animation-target"));
+                // let bounce = new Bounce();
+                // let x = 300;
+                // if (nextIndex < currentIndex) {
+                //     x = -300
+                // }
+                // bounce.translate({
+                //     from: { x: x, y: 0 },
+                //     to: { x: 0, y: 0 },
+                //     duration: 500,
+                //     stiffness: 2,
+                // }).applyTo(document.querySelectorAll(".animation-target"));
                 
                 currentTab = key;
-                $(val.id).show();
+                $(val.id).fadeIn('fast');
                 $(val.id).css('display', 'inline-flex');
                 $('.nav').attr('class', 'nav selected ' + currentNav);
                 setTimeout(function () {
