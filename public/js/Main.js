@@ -51,12 +51,12 @@ $(document).ready(function() {
     $('#sendPaymentValidationFormEmpty').on('click', function() {
         showAlertSuccess( "Successful transaction",  "Successful transaction");
     });
-    // $('#paymentValidationFormEmpty').on('click', function() {
-    //     showAlertSuccess( "Successful transaction",  "Successful transaction");
-    // });
-    // $('#payPaymentValidationFormEmpty').on('click', function() {
-    //     showAlertSuccess( "Successful transaction",  "Successful transaction");
-    // });
+    $('#paymentValidationFormEmpty').on('click', function() {
+        showAlertSuccess( "Successful transaction",  "Successful transaction");
+    });
+    $('#payPaymentValidationFormEmpty').on('click', function() {
+        showAlertSuccess( "Successful transaction",  "Successful transaction");
+    });
 });
 
 /**
@@ -151,11 +151,7 @@ function tabNavigation() {
                 }, 100) 
                 setTimeout(function () {
                     $('.nav').attr('class', 'nav ' + val.nav);
-<<<<<<< Updated upstream
                     currentNav = val.nav;
-=======
-                    currentTab = val.nav;
->>>>>>> Stashed changes
                 }, 200);
                 
                 $('#screenTitle').text(val.title);

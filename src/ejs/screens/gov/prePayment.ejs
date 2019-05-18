@@ -8,16 +8,25 @@
     }) %>
 
     <div class="verticalFlexFilled">
+        
         <div class="verticalFlexFilled validationContent">
-            <h3>Visa Application Form</h3>
-            <p>If applicable, payment for this transaction will be deducted from your wallet balance ($214.26), the total amount for this form is:</p>
-            <h2 style="margin:0 auto;">$18.00</h2>
-            <image id="signatureImage" class="signatureImage" src="" />
+            <div>
+                <h4>Payment For</h4>
+                <h3>Visa Application Form</h3>
+            </div>
+            <div>
+                <h4>Note</h4>
+                <h3>If applicable, payment for this transaction will be deducted from your wallet balance ($214.26), the total amount for this form is:</h3>
+            </div>
+            <span class="totalAmount">Amount: <span class="totalAmountNumber">$18.00</span></span>
+            <!-- <image id="signatureImage" class="signatureImage" src="" /> -->
         </div>
-        <ul class="categorySelect">
-            <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
-            <li onclick="p_fingerprint()"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
-        </ul>
+        <div>
+            <ul class="categorySelect">
+                <li onclick="window.location='p_facerecognition'"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+                <li onclick="window.location='p_fingerprint'"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+            </ul>
+        </div>
         <div class="containerAction disabledAction" id="paymentValidationFormEmpty">
             <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
         </div>

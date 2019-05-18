@@ -151,11 +151,7 @@ function tabNavigation() {
                 }, 100) 
                 setTimeout(function () {
                     $('.nav').attr('class', 'nav ' + val.nav);
-<<<<<<< Updated upstream
                     currentNav = val.nav;
-=======
-                    currentTab = val.nav;
->>>>>>> Stashed changes
                 }, 200);
                 
                 $('#screenTitle').text(val.title);
