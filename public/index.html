@@ -939,9 +939,15 @@
         <h4>Payment Method</h4>    
     </div>
 
-    <div class="containerAction" id="payRecipientInformationFormEmpty" href="#payRecipientInformation">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
-    </div>
+    <ul class="categorySelect" id="sendPaymentMethodCategories">
+        <li id="payRecipientInformationFormEmpty" href="#payRecipientInformation">
+            <div>
+                <i class="fal fa-wallet"></i></i><h3>Wallet</h3>
+            </div>
+            <h4>Balance: $214.23</h4>
+        </li>
+        <li id="sendAddCard" onclick="p_addcard()"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
+    </ul>
 
     </div>
 </div>
@@ -961,8 +967,32 @@
         <h4>Recipient Information</h4>    
     </div>
 
-    <div class="containerAction" id="payAuthenticationFormEmpty" href="#payAuthentication">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    <div class="verticalFlexFilled">
+        <div class="generalForm">  
+            <form class="" action="">
+                <label class="amount">
+                    <h4>Amount</h4>
+                </label>
+                <input type="text" data-profile="amount" />
+                <label class="recipientName">
+                    <h4>Recipient name</h4>
+                </label>
+                <input type="text" data-profile="recipientName">
+                <label class="recipientEmail">
+                    <h4>Recipient email</h4>
+                </label>
+                <input type="text" data-profile="recipientEmail">
+            </form>
+        </div>
+        <div>
+            <div class="containerAction" onclick="p_scanandpay()">
+                <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
+            </div>
+            <br />
+            <div class="containerAction" id="payAuthenticationFormEmpty" href="#payAuthentication">
+                <i class="fal fa-layer-plus"></i><h4>Next</h4>
+            </div>
+        </div>
     </div>
 
     </div>
@@ -983,8 +1013,28 @@
         <h4>pay Authentication</h4>    
     </div>
 
-    <div class="containerAction" id="payPaymentValidationFormEmpty">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
+    <div class="verticalFlexFilled">
+        <div class="verticalFlexFilled validationContent">
+            <div>
+                <h4>Recipient Name</h4>
+                <h3>Aina Rakotonirina</h3>
+            </div>
+            <div>
+                <h4>Recipient Email</h4>
+                <h3>aina.rakotonirina@gmail.com</h3>
+            </div>
+            <span class="totalAmount">Amount: <span class="totalAmountNumber">$12.43</span></span>
+        </div>
+
+        <div>
+            <ul class="categorySelect">
+                <li onclick="p_facerecognition('walletPay')"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
+                <li onclick="p_fingerprint('walletPay')"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
+            </ul>
+            <div class="containerAction disabledAction" id="payPaymentValidationFormEmpty">
+                <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
+            </div>
+        </div>
     </div>
 
     </div>
