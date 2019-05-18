@@ -28,8 +28,8 @@ function fingerprint(sResult) {
 }
 function p_fingerprint(current) {
     currentScreen = current;
-    // window.location='p_fingerprint'
-    fingerprint(true);
+    window.location='p_fingerprint'
+    //fingerprint(true);
 }
 
 /**
@@ -61,8 +61,8 @@ function facerecognition(sResult) {
 }
 function p_facerecognition(current) {
     currentScreen = current;
-    // window.location='p_facerecognition'
-    facerecognition(true);
+    window.location='p_facerecognition'
+    //facerecognition(true);
 }
 
 function addcard(sResult) {
@@ -74,7 +74,7 @@ function addcard(sResult) {
 }
 function p_addcard() {
     window.location='p_addcard'
-    // addcard(true);
+    //addcard(true);
 }
 
 
@@ -85,5 +85,5 @@ function scanandpay(sResult) {
 }
 function p_scanandpay() {
     window.location='p_addcard'
-    // scanandpay(true);
+    //scanandpay(true);
 }

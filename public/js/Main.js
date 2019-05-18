@@ -44,19 +44,19 @@ $(document).ready(function() {
         resetSignature();
     });
     $('#docsQRCodeClick').on('click', function() {
-        showAlertSuccess( "Successful scanned",  "Successful scanned");
+        showAlertSuccess( "QR Scan",  "Scan Successful");
     });
     $('#receiveQRPress').on('click', function() {
-        showAlertSuccess( "Successful transaction",  "Successful transaction");
+        showAlertSuccess( "Transaction Successful",  "A payment of $530.00 has been added to your wallet!");
     });
     $('#sendPaymentValidationFormEmpty').on('click', function() {
-        showAlertSuccess( "Successful transaction",  "Successful transaction");
+        showAlertSuccess( "Payment Validation",  "Transaction Successful");
     });
     $('#paymentValidationFormEmpty').on('click', function() {
-        showAlertSuccess( "Successful transaction",  "Successful transaction");
+        showAlertSuccess( "Payment Validation",  "Transaction Successful");
     });
     $('#payPaymentValidationFormEmpty').on('click', function() {
-        showAlertSuccess( "Successful transaction",  "Successful transaction");
+        showAlertSuccess( "Payment Validation",  "Transaction Successful");
     });
 
     $('.back-docsAuthentication').on('click', function() {
