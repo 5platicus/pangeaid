@@ -191,7 +191,7 @@ function pastDummyProfile() {
         $('[data-profile="' + key + '"]').css('border', '1px solid #6980b5');
     })
     $('[data-profile="profilePic"]').text('');
-    $('[data-profile="profilePic"]').css('background', 'url(../assets/images/profilePic.png)');
+    $('[data-profile="profilePic"]').css('background', 'url(https://zamorai.com/pangea/assets/images/profilePic.png)');
     $('[data-profile="profilePic"]').css('background-size', 'cover');
 }
 function pasteScanAndPay() {
