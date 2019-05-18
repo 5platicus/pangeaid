@@ -675,35 +675,11 @@
             <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
             <li onclick="p_fingerprint()"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
         </ul>
-        <div class="containerAction disabledAction" id="paymentValidationFormEmpty" href="#paymentValidation">
+        <div class="containerAction disabledAction" id="paymentValidationFormEmpty">
             <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
         </div>
     </div>
 
-    </div>
-</div>
-    <div id="paymentValidation" class="animatedModal paymentValidation">
-    <div class="modalHeader paymentValidation">
-    
-        <i class="back-paymentValidation fal fa-chevron-left"></i>
-    
-    <div>
-        <i class="fal fa-file-contract"></i>
-        <span class="modalTitle">Payment Validation</span>
-    </div>
-    <i class="close-paymentValidation close-prePayment close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
-</div>
-<div class="modalContent">
-    <div class="formTitle">
-        <h4>Payment Validation</h4>    
-    </div>
-
-    <image id="signatureImage" class="signatureImage" src="" />
-
-    <div class="containerAction" id="visaApplicationFormEmpty" href="#visaApplication">
-        <i class="fal fa-layer-plus"></i><h4>New Application</h4>
-    </div>
-    
     </div>
 </div>
 
@@ -772,9 +748,6 @@
     <div class="verticalFlexFilled">
         <div class="qrCodeContainer">
             <image id="qrCodeImage" class="qrCodeImage" src="assets/images/qrcode.png" />
-        </div>
-        <div class="containerAction" id="displayQRFormEmpty" href="#displayQR">
-            <i class="fal fa-layer-plus"></i><h4>Next</h4>
         </div>
     </div>
 
@@ -882,60 +855,12 @@
                 <li onclick="p_facerecognition()"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
                 <li onclick="p_fingerprint()"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
             </ul>
-            <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty" href="#sendPaymentValidation">
+            <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty">
                 <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
             </div>
         </div>
     </div>
     
-    </div>
-</div>
-    <div id="sendPaymentValidation" class="animatedModal sendPaymentValidation">
-    <div class="modalHeader sendPaymentValidation">
-    
-        <i class="back-sendPaymentValidation fal fa-chevron-left"></i>
-    
-    <div>
-        <i class="fal fa-file-contract"></i>
-        <span class="modalTitle">Payment Validation</span>
-    </div>
-    <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication close-sendPaymentValidation fal fa-times-circle"></i>
-</div>
-<div class="modalContent">
-    <div class="formTitle">
-        <h4>Payment Validation</h4>    
-    </div>
-    <div class="verticalFlexFilled">
-        <div></div>
-        <div class="containerAction" id="sendSuccessFormEmpty" href="#sendSuccess">
-            <i class="fal fa-layer-plus"></i><h4>Next</h4>
-        </div>
-    </div>
-
-    </div>
-</div>
-    <div id="sendSuccess" class="animatedModal sendSuccess">
-    <div class="modalHeader sendSuccess">
-    
-        <i class="back-sendSuccess fal fa-chevron-left"></i>
-    
-    <div>
-        <i class="fal fa-file-contract"></i>
-        <span class="modalTitle">Send Success</span>
-    </div>
-    <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication close-sendPaymentValidation close-sendSuccess fal fa-times-circle"></i>
-</div>
-<div class="modalContent">
-    <div class="formTitle">
-        <h4>Send Success</h4>    
-    </div>
-
-    <div class="verticalFlexFilled">
-            <div></div>
-        <div class="containerAction" id="sendSuccessFormEmpty" href="#sendSuccess">
-            <i class="fal fa-layer-plus"></i><h4>Next</h4>
-        </div>
-    </div>
     </div>
 </div>
 
@@ -999,51 +924,7 @@
         <h4>pay Authentication</h4>    
     </div>
 
-    <div class="containerAction" id="payPaymentValidationFormEmpty" href="#payPaymentValidation">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
-    </div>
-
-    </div>
-</div>
-    <div id="payPaymentValidation" class="animatedModal payPaymentValidation">
-    <div class="modalHeader payPaymentValidation">
-    
-        <i class="back-payPaymentValidation fal fa-chevron-left"></i>
-    
-    <div>
-        <i class="fal fa-file-contract"></i>
-        <span class="modalTitle">Payment Validation</span>
-    </div>
-    <i class="close-newTransaction close-payMoney close-payPaymentMethod close-payRecipientInformation close-payAuthentication close-payPaymentValidation fal fa-times-circle"></i>
-</div>
-<div class="modalContent">
-    <div class="formTitle">
-        <h4>Payment Validation</h4>    
-    </div>
-
-    <div class="containerAction" id="paySuccessFormEmpty" href="#paySuccess">
-        <i class="fal fa-layer-plus"></i><h4>Next</h4>
-    </div>
-
-    </div>
-</div>
-    <div id="paySuccess" class="animatedModal paySuccess">
-    <div class="modalHeader paySuccess">
-    
-        <i class="back-paySuccess fal fa-chevron-left"></i>
-    
-    <div>
-        <i class="fal fa-file-contract"></i>
-        <span class="modalTitle">Pay Success</span>
-    </div>
-    <i class="close-newTransaction close-payMoney close-payPaymentMethod close-payRecipientInformation close-payAuthentication close-payPaymentValidation close-paySuccess fal fa-times-circle"></i>
-</div>
-<div class="modalContent">
-    <div class="formTitle">
-        <h4>pay Success</h4>    
-    </div>
-
-    <div class="containerAction" id="paySuccessFormEmpty" href="#paySuccess">
+    <div class="containerAction" id="payPaymentValidationFormEmpty">
         <i class="fal fa-layer-plus"></i><h4>Next</h4>
     </div>
 
