@@ -27,8 +27,6 @@ $(document).ready(function() {
 
     $('#prePaymentFormEmpty').on('click', function() {
         saveSignature();
-    })
-    $('#paymentValidationFormEmpty').on('click', function() {
         loadSignature();
     })
     /**
@@ -46,28 +44,50 @@ $(document).ready(function() {
     $('#docsQRCodeClick').on('click', function() {
         showAlertSuccess( "QR Scan",  "Scan Successful");
     });
+
     /**
+     * ------------------------------------------------------------------------------
      * SHOWING ALERT ON PRESS
     */
     $('#receiveQRPress').on('click', function() {
         showAlertSuccess( "Transaction Successful",  "A payment of $530.00 has been added to your wallet!");
     });
-    $('#sendPaymentValidationFormEmpty').on('click', function() {
-        showAlertSuccess( "Payment Validation",  "Transaction Successful");
-    });
+    // gov successfull payment - modal plus close on end
     $('#paymentValidationFormEmpty').on('click', function() {
-        showAlertSuccess( "Payment Validation",  "Transaction Successful");
+        swal({ title: "Payment Validation", text: "Transaction Successful" })
+            .then((res) => {
+                resetGovScreens();
+                let classList = $('#paymentValidationFormEmpty').data('classes').split(/\s+/);
+                closeClasses(classList)
+            });
     });
+    // send money successfull - modal plus close on end
+    $('#sendPaymentValidationFormEmpty').on('click', function() {
+        swal({ title: "Payment Validation", text: "Transaction Successful" })
+            .then((res) => {
+                resetIdentityValidation();
+                let classList = $('#sendPaymentValidationFormEmpty').data('classes').split(/\s+/);
+                closeClasses(classList)
+            });
+    });
+    // send money successfull - modal plus close on end
     $('#payPaymentValidationFormEmpty').on('click', function() {
-        showAlertSuccess( "Payment Validation",  "Transaction Successful");
+        swal({ title: "Payment Validation", text: "Transaction Successful" })
+            .then((res) => {
+                resetIdentityValidation();
+                let classList = $('#payPaymentValidationFormEmpty').data('classes').split(/\s+/);
+                closeClasses(classList)
+            });
     });
-
-    $('.back-docsAuthentication').on('click', function() {
-        resetIdentityValidation()
-    })
-    $('.close-docsAuthentication').on('click', function() {
-        resetIdentityValidation()
-    })
+    // reseting authentication on back or close buttons
+    $('.back-docsAuthentication').on('click', function() { resetIdentityValidation() })
+    $('.close-docsAuthentication').on('click', function() { resetIdentityValidation() })
+    $('.back-prePayment').on('click', function() { resetIdentityValidation() })
+    $('.close-prePayment').on('click', function() { resetIdentityValidation() })
+    $('.back-sendAuthentication').on('click', function() { resetIdentityValidation() })
+    $('.close-sendAuthentication').on('click', function() { resetIdentityValidation() })
+    $('.back-payAuthentication').on('click', function() { resetIdentityValidation() })
+    $('.close-payAuthentication').on('click', function() { resetIdentityValidation() })
 });
 
 /**

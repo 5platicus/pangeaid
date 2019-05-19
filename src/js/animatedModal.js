@@ -102,24 +102,8 @@
                          * RESETING SCREENS ON CLOSE PRESS
                         */
                         resetGovScreens();
-                        
-                        let classList = $(this).attr('class').split(/\s+/);
-                        $.each(classList, function(index, item) {
-                            if (item.toLowerCase().indexOf('close-') >= 0) {
-                                let selector = item.replace('close-','');
-                                if ($('#' + selector).hasClass(selector+'-on')) {
-                                    $('#' + selector).removeClass(selector+'-on');
-                                    $('#' + selector).addClass(selector+'-off');
-                                } 
-                    
-                                if ($('#' + selector).hasClass(selector+'-off')) {
-                                    $('#' + selector).removeClass(selector);
-                                    $('#' + selector).addClass(selector);
-                                    $('#' + selector).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterClose);
-                                    $('#' + selector).css({'z-index':settings.zIndexOut});
-                                };
-                            }
-                        });
+                        let classList = $(this).data('classes').split(/\s+/);
+                        closeClasses(classList, settings.zIndexOut)
                     }
                 });
             } else {
@@ -165,5 +149,27 @@
 }(jQuery));
 
 
+function closeClasses(classList, zIndexOut, afterClose) {
+    if (!afterClose) {
+        afterClose = function() {};
+    }
+    if (!zIndexOut) {
+        zIndexOut = '-9999';
+    }
+    $.each(classList, function(index, item) {
+        if (item.toLowerCase().indexOf('close-') >= 0) {
+            let selector = item.replace('close-','');
+            if ($('#' + selector).hasClass(selector+'-on')) {
+                $('#' + selector).removeClass(selector+'-on');
+                $('#' + selector).addClass(selector+'-off');
+            } 
 
-        
+            if ($('#' + selector).hasClass(selector+'-off')) {
+                $('#' + selector).removeClass(selector);
+                $('#' + selector).addClass(selector);
+                $('#' + selector).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterClose);
+                $('#' + selector).css({'z-index':zIndexOut});
+            };
+        }
+    });
+}

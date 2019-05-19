@@ -345,7 +345,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">New Application</span>
     </div>
-    <i class="close-applicationCategories fal fa-times-circle"></i>
+    <i class="close-applicationCategories fal fa-times-circle" data-classes="close-applicationCategories"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -376,7 +376,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Travel Category</span>
     </div>
-    <i class="close-travelCategory close-applicationCategories fal fa-times-circle"></i>
+    <i class="close-travelCategory fal fa-times-circle" data-classes="close-travelCategory close-applicationCategories"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -410,7 +410,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">FORM 223F</span>
     </div>
-    <i class="close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
+    <i class="close-visaApplication fal fa-times-circle" data-classes="close-visaApplication close-travelCategory close-applicationCategories"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -645,7 +645,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Pre Payment</span>
     </div>
-    <i class="close-prePayment close-visaApplication close-travelCategory close-applicationCategories fal fa-times-circle"></i>
+    <i class="close-prePayment fal fa-times-circle" data-classes="close-prePayment close-visaApplication close-travelCategory close-applicationCategories"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -670,7 +670,7 @@
                 <li onclick="p_facerecognition('govPayment')"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
                 <li onclick="p_fingerprint('govPayment')"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
             </ul>
-            <div class="containerAction disabledAction" id="paymentValidationFormEmpty">
+            <div class="containerAction disabledAction" id="paymentValidationFormEmpty" data-classes="close-prePayment close-visaApplication close-travelCategory close-applicationCategories">
                 <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
             </div>
         </div>
@@ -689,7 +689,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">New Document</span>
     </div>
-    <i class="close-addDocument fal fa-times-circle"></i>
+    <i class="close-addDocument fal fa-times-circle" data-classes="close-addDocument"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -707,7 +707,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Driver&#39;s License</span>
     </div>
-    <i class="close-docsAuthentication fal fa-times-circle"></i>
+    <i class="close-docsAuthentication fal fa-times-circle" data-classes="close-docsAuthentication"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -738,7 +738,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Driver&#39;s License</span>
     </div>
-    <i class="close-displayDocQR fal fa-times-circle"></i>
+    <i class="close-displayDocQR fal fa-times-circle" data-classes="close-displayDocQR"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -763,7 +763,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">New Transaction</span>
     </div>
-    <i class="close-newTransaction fal fa-times-circle"></i>
+    <i class="close-newTransaction fal fa-times-circle" data-classes="close-newTransaction"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -790,7 +790,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Receive Money</span>
     </div>
-    <i class="close-newTransaction close-displayQR fal fa-times-circle"></i>
+    <i class="close-displayQR fal fa-times-circle" data-classes="close-newTransaction close-displayQR"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -815,7 +815,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Send Money</span>
     </div>
-    <i class="close-newTransaction close-sendPaymentMethod fal fa-times-circle"></i>
+    <i class="close-sendPaymentMethod fal fa-times-circle" data-classes="close-newTransaction close-sendPaymentMethod"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -843,7 +843,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Recipient Information</span>
     </div>
-    <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation fal fa-times-circle"></i>
+    <i class="close-sendRecipientInformation fal fa-times-circle" data-classes="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -889,7 +889,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Validation</span>
     </div>
-    <i class="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication fal fa-times-circle"></i>
+    <i class="close-sendAuthentication fal fa-times-circle" data-classes="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -914,7 +914,7 @@
                 <li onclick="p_facerecognition('walletSend')"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
                 <li onclick="p_fingerprint('walletSend')"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
             </ul>
-            <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty">
+            <div class="containerAction disabledAction" id="sendPaymentValidationFormEmpty" data-classes="close-newTransaction close-sendMoney close-sendPaymentMethod close-sendRecipientInformation close-sendAuthentication">
                 <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
             </div>
         </div>
@@ -932,7 +932,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Payment Bill</span>
     </div>
-    <i class="close-newTransaction close-payPaymentMethod fal fa-times-circle"></i>
+    <i class="close-payPaymentMethod fal fa-times-circle" data-classes="close-newTransaction close-payPaymentMethod"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -960,7 +960,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">Recipient Information</span>
     </div>
-    <i class="close-newTransaction close-payMoney close-payPaymentMethod close-payRecipientInformation fal fa-times-circle"></i>
+    <i class="close-payRecipientInformation fal fa-times-circle" data-classes="close-newTransaction close-payMoney close-payPaymentMethod close-payRecipientInformation"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -1006,7 +1006,7 @@
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle">pay Authentication</span>
     </div>
-    <i class="close-newTransaction close-payMoney close-payPaymentMethod close-payRecipientInformation close-payAuthentication fal fa-times-circle"></i>
+    <i class="close-payAuthentication fal fa-times-circle" data-classes="close-newTransaction close-payMoney close-payPaymentMethod close-payRecipientInformation close-payAuthentication"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">
@@ -1031,7 +1031,7 @@
                 <li onclick="p_facerecognition('walletPay')"><i class="fal fa-head-side"></i></i><h3>Face Recognition</h3></li>
                 <li onclick="p_fingerprint('walletPay')"><i class="fal fa-hand-point-up"></i><h3>Touch ID</h3></li>
             </ul>
-            <div class="containerAction disabledAction" id="payPaymentValidationFormEmpty">
+            <div class="containerAction disabledAction" id="payPaymentValidationFormEmpty" data-classes="close-newTransaction close-payMoney close-payPaymentMethod close-payRecipientInformation close-payAuthentication">
                 <i class="fal fa-money-bill-wave"></i><h4>Pay Now</h4>
             </div>
         </div>
