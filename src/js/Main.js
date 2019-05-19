@@ -46,6 +46,9 @@ $(document).ready(function() {
     $('#docsQRCodeClick').on('click', function() {
         showAlertSuccess( "QR Scan",  "Scan Successful");
     });
+    /**
+     * SHOWING ALERT ON PRESS
+    */
     $('#receiveQRPress').on('click', function() {
         showAlertSuccess( "Transaction Successful",  "A payment of $530.00 has been added to your wallet!");
     });

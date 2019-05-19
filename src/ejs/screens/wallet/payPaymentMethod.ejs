@@ -7,14 +7,14 @@
         closeClasses: "close-newTransaction close-payPaymentMethod"
     }) %>
 
-    <ul class="categorySelect" id="sendPaymentMethodCategories">
+    <ul class="categorySelect" id="payPaymentMethodCategories">
         <li id="payRecipientInformationFormEmpty" href="#payRecipientInformation">
             <div>
                 <i class="fal fa-wallet"></i></i><h3>Wallet</h3>
             </div>
             <h4>Balance: $214.23</h4>
         </li>
-        <li id="sendAddCard" onclick="p_addcard()"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
+        <li id="payAddCard" onclick="p_addcard('payPaymentMethod')"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
     </ul>
 
     <% include ../../include/modalFooter.ejs %>

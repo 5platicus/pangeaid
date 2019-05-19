@@ -29,7 +29,7 @@ function fingerprint(sResult) {
 function p_fingerprint(current) {
     currentScreen = current;
     window.location='p_fingerprint'
-    //fingerprint(true);
+    // fingerprint(true);
 }
 
 /**
@@ -62,28 +62,41 @@ function facerecognition(sResult) {
 function p_facerecognition(current) {
     currentScreen = current;
     window.location='p_facerecognition'
-    //facerecognition(true);
+    // facerecognition(true);
 }
 
 function addcard(sResult) {
     if (sResult) {
-        let length = $('#sendPaymentMethodCategories').children().length;
-        $("<li class='creditCard' id='sendRecipientInformationFormEmpty" + length + "' href='#sendRecipientInformation'><div><i class='fal fa-credit-card'></i></i><h3>Card number</h3></div><h4>4200 5541 4532 1137</h4></li>").insertBefore('#sendAddCard');
-        $("#sendRecipientInformationFormEmpty" + length).animatedModal();
+        let selector = '';
+        let selectorCategories = '';
+        if (currentScreen === 'sendPaymentMethod') {
+            selector = 'sendRecipientInformationFormEmpty';
+            selectorCategories = "sendPaymentMethodCategories";
+            cardSelector = 'sendAddCard';
+        } else if (currentScreen === 'payPaymentMethod') {
+            selector = 'payRecipientInformationFormEmpty';
+            selectorCategories = "payPaymentMethodCategories";
+            cardSelector = 'payAddCard';
+        }
+        let length = $('#' + selectorCategories).children().length;
+        $("<li class='creditCard' id='" + selector + length + "' href='#sendRecipientInformation'><div><i class='fal fa-credit-card'></i></i><h3>Card number</h3></div><h4>4200 5541 4532 1137</h4></li>").insertBefore('#' + cardSelector);
+        $("#" + selector + length).animatedModal();
     }
 }
-function p_addcard() {
+function p_addcard(current) {
+    currentScreen = current;
     window.location='p_addcard'
-    //addcard(true);
+    // addcard(true);
 }
 
 
-function scanandpay(sResult) {
+function scanandpay(current) {
     if (sResult) {
         pasteScanAndPay()
     }
 }
-function p_scanandpay() {
+function p_scanandpay(current) {
+    currentScreen = current;
     window.location='p_scanandpay'
-    //scanandpay(true);
+    // scanandpay(true);
 }

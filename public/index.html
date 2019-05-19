@@ -829,7 +829,7 @@
             </div>
             <h4>Balance: $214.23</h4>
         </li>
-        <li id="sendAddCard" onclick="p_addcard()"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
+        <li id="sendAddCard" onclick="p_addcard('sendPaymentMethod')"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
     </ul>
 
     </div>
@@ -868,7 +868,7 @@
             </form>
         </div>
         <div>
-            <div class="containerAction" onclick="p_scanandpay()">
+            <div class="containerAction" onclick="p_scanandpay('sendRecipientInformation')">
                 <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
             </div>
             <br />
@@ -939,14 +939,14 @@
         <h4>Payment Method</h4>    
     </div>
 
-    <ul class="categorySelect" id="sendPaymentMethodCategories">
+    <ul class="categorySelect" id="payPaymentMethodCategories">
         <li id="payRecipientInformationFormEmpty" href="#payRecipientInformation">
             <div>
                 <i class="fal fa-wallet"></i></i><h3>Wallet</h3>
             </div>
             <h4>Balance: $214.23</h4>
         </li>
-        <li id="sendAddCard" onclick="p_addcard()"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
+        <li id="payAddCard" onclick="p_addcard('payPaymentMethod')"><i class="fal fa-plus-circle"></i></i><h3>Add credit card</h3></li>
     </ul>
 
     </div>
@@ -985,7 +985,7 @@
             </form>
         </div>
         <div>
-            <div class="containerAction" onclick="p_scanandpay()">
+            <div class="containerAction" onclick="p_scanandpay('payRecipientInformation')">
                 <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
             </div>
             <br />
