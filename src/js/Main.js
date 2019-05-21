@@ -56,7 +56,7 @@ $(document).ready(function() {
     $('#paymentValidationFormEmpty').on('click', function() {
         swal({ title: "Payment Validation", text: "Transaction Successful" })
             .then((res) => {
-                resetGovScreens();
+                resetScreens();
                 let classList = $('#paymentValidationFormEmpty').data('classes').split(/\s+/);
                 closeClasses(classList)
             });
@@ -235,7 +235,7 @@ function loadSignature() {
     $('#signatureImage').attr('src', data);
 }
 
-function resetGovScreens() {
+function resetScreens() {
     resetProfile();
     resetSignature();
     resetIdentityValidation();

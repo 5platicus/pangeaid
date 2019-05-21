@@ -1,14 +1,14 @@
 <div class="modalHeader <%= identifier %>">
     <% if (back) { %>
-        <i class="back-<%= identifier %> fal fa-chevron-left"></i>
+        <i class="back-<%= identifier %> fal fa-chevron-left headerNavButton"></i>
     <% } else { %>
-        <div></div>
+        <div class="headerNavButton"></div>
     <% } %>
-    <div>
+    <div class="modalTitleContainer">
         <i class="fal fa-file-contract"></i>
         <span class="modalTitle"><%= title %></span>
     </div>
-    <i class="close-<%= identifier %> fal fa-times-circle" data-classes="<%= closeClasses %>"></i>
+    <i class="close-<%= identifier %> fal fa-times-circle headerNavButton" data-classes="<%= closeClasses %>"></i>
 </div>
 <div class="modalContent">
     <div class="formTitle">

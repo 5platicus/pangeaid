@@ -101,7 +101,7 @@
                         /**
                          * RESETING SCREENS ON CLOSE PRESS
                         */
-                        resetGovScreens();
+                        resetScreens();
                         let classList = $(this).data('classes').split(/\s+/);
                         closeClasses(classList, settings.zIndexOut)
                     }
