@@ -90,9 +90,9 @@ function p_addcard(current) {
 }
 
 
-function scanandpay(current) {
+function scanandpay(sResult) {
     if (sResult) {
-        pasteScanAndPay()
+        pasteScanAndPay(currentScreen)
     }
 }
 function p_scanandpay(current) {

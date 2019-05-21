@@ -81,13 +81,11 @@ $(document).ready(function() {
     });
     // reseting authentication on back or close buttons
     $('.back-docsAuthentication').on('click', function() { resetIdentityValidation() })
-    $('.close-docsAuthentication').on('click', function() { resetIdentityValidation() })
     $('.back-prePayment').on('click', function() { resetIdentityValidation() })
-    $('.close-prePayment').on('click', function() { resetIdentityValidation() })
     $('.back-sendAuthentication').on('click', function() { resetIdentityValidation() })
-    $('.close-sendAuthentication').on('click', function() { resetIdentityValidation() })
     $('.back-payAuthentication').on('click', function() { resetIdentityValidation() })
-    $('.close-payAuthentication').on('click', function() { resetIdentityValidation() })
+    $('.back-sendRecipientInformation').on('click', function() { resetScanAndPay() })
+    $('.back-payRecipientInformation').on('click', function() { resetScanAndPay() })
 });
 
 /**
@@ -217,10 +215,15 @@ function pastDummyProfile() {
     $('[data-profile="profilePic"]').css('background', 'url(https://zamorai.com/pangea/assets/images/profilePic.png)');
     $('[data-profile="profilePic"]').css('background-size', 'cover');
 }
-function pasteScanAndPay() {
-    $('[data-profile="recipientName"]').val('Aina Rakotonirina');
-    $('[data-profile="recipientEmail"]').val('aina.rakotonirina@gmail.com');
+function pasteScanAndPay(id) {
+    $('#' + id + ' [data-profile="recipientName"]').val('Aina Rakotonirina');
+    $('#' + id + ' [data-profile="recipientEmail"]').val('aina.rakotonirina@gmail.com');
 }
+function resetScanAndPay() {
+    $('[data-profile="recipientName"]').val('');
+    $('[data-profile="recipientEmail"]').val('');
+}
+
 
 function saveSignature() {
     let data = $('#signature').signature('png');
@@ -236,6 +239,7 @@ function resetGovScreens() {
     resetProfile();
     resetSignature();
     resetIdentityValidation();
+    resetScanAndPay();
 }
 function resetProfile() {
     let variables = {
