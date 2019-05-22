@@ -61,8 +61,8 @@ function facerecognition(sResult) {
 }
 function p_facerecognition(current) {
     currentScreen = current;
-    // window.location='p_facerecognition'
-    facerecognition(true);
+    window.location='p_facerecognition'
+    //facerecognition(true);
 }
 
 function addcard(sResult) {
