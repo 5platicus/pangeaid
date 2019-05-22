@@ -91,20 +91,27 @@ $(document).ready(function() {
 /**
  * MODAL ROUTES INITIALIZATION
 */
-function initializeModals() {
-    let options = {
-        beforeClose: function beforeModalClose() {
-            return swal({
-                title: "Warning",
-                text: "Closing this window will delete your progress. Are you sure that you would like to close it?",
-                buttons: true,
-                dangerMode: true
-            });
-        }
+let options = {
+    beforeClose: function beforeModalClose() {
+        return swal({
+            title: "Warning",
+            text: "Closing this window will delete your progress. Are you sure that you would like to close it?",
+            buttons: true,
+            dangerMode: true
+        });
     }
+}
+function initializeModals() {
 
     $("#govFormEmpty").animatedModal();
-    $("#travelCategoryFormEmpty").animatedModal(options);
+    $("#travelCategoryFormEmpty").animatedModal($.extend({
+        afterOpen: function() {
+            loadTravelCategories()
+        },
+        afterClose: function() {
+            $('.traveInnerCategorySelect li').remove();
+        }
+    }, options));
     $("#visaApplicationFormEmpty").animatedModal(options);
     $("#prePaymentFormEmpty").animatedModal(options);
 
@@ -279,4 +286,40 @@ function showAlertSuccess(title, text) {
     });
     $('<div class="swal-success-container"></div>').insertAfter('.swal-text');
     $('.swal-success-container').html(successAnimation);
+}
+
+function loadTravelCategories() {
+    let categories = [
+        { name: "Form 112A - Customs" },
+        { name: "Form 32B - Import/Export" },
+        { name: "Form A-231 - Passport Application" },
+        { name: "Form 223F - Visa Application", id: "visaApplicationFormEmpty", href: "#visaApplication" },
+        { name: "Form 23C - Exotic Pet Transport" },
+        { name: "Form 544B - Food Transport" },
+        { name: "Form 343A - Funds Transport" },
+        { name: "Form 12B - Security Clearance" },
+        { name: "Form 53C - Travel Permit" },
+        { name: "Form A-543 - Spouse/Guardian Update" },
+        { name: "Form 442B - Insurance" },
+        { name: "Form B-343 - Debt Payment" }
+    ];
+    $('.traveInnerCategorySelect span').remove();
+    $.map(categories, function(item, index) {
+        setTimeout(function() {
+            if (item.id) {
+                $('.traveInnerCategorySelect').append('<li id="' + item.id + '" href="' + item.href + '">' + item.name + '</li>');
+                let li = $('.traveInnerCategorySelect li').last();
+                $('#' + item.id).animatedModal(options);
+                setTimeout(function() {
+                    li.attr('class', 'visible');
+                }, 100)
+            } else {
+                $('.traveInnerCategorySelect').append('<li>' + item.name + '</li>');
+                let li = $('.traveInnerCategorySelect li').last();
+                setTimeout(function() {
+                    li.attr('class', 'visible');
+                }, 100)
+            }
+        }, index * 100)
+    })
 }
