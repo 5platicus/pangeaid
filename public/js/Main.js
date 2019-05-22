@@ -333,7 +333,7 @@ function loadTravelCategories() {
                     li.attr('class', 'visible');
                 }, 100)
             }
-        }, index * 50)
+        }, index * 25)
     })
 }
 
