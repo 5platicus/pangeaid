@@ -3,7 +3,7 @@ let successAnimation = "<svg id='successAnimation' class='animated' xmlns='http:
 $(document).ready(function() {
     initializeModals();
     tabNavigation();
-    $('#signature').signature();
+    // $('#signature').signature();
     [].slice.call( document.querySelectorAll( '.progress-button' ) ).forEach( function( bttn, pos ) {
         new UIProgressButton( bttn, {
             callback : function( instance ) {
@@ -104,14 +104,14 @@ let options = {
 function initializeModals() {
 
     $("#govFormEmpty").animatedModal();
-    $("#travelCategoryFormEmpty").animatedModal($.extend({
+    $("#travelCategoryFormEmpty").animatedModal({
         afterOpen: function() {
-            loadTravelCategories()
+            loadTravelCategories();
         },
         afterClose: function() {
             $('.traveInnerCategorySelect li').remove();
-        }
-    }, options));
+        },
+    });
     $("#visaApplicationFormEmpty").animatedModal(options);
     $("#prePaymentFormEmpty").animatedModal(options);
 
@@ -309,7 +309,15 @@ function loadTravelCategories() {
             if (item.id) {
                 $('.traveInnerCategorySelect').append('<li id="' + item.id + '" href="' + item.href + '">' + item.name + '</li>');
                 let li = $('.traveInnerCategorySelect li').last();
-                $('#' + item.id).animatedModal(options);
+                $('#' + item.id).animatedModal($.extend({
+                    afterOpen: function() {
+                        loadVisaApplicationFormData()
+                    },
+                    afterClose: function() {
+                        $('#visaApplication .modalContent').scrollTop(0);
+                        $('#visaApplicationForm #visaApplicationFormData').remove();
+                    }
+                }, options));
                 setTimeout(function() {
                     li.attr('class', 'visible');
                 }, 100)
@@ -320,6 +328,13 @@ function loadTravelCategories() {
                     li.attr('class', 'visible');
                 }, 100)
             }
-        }, index * 100)
+        }, index * 150)
     })
+}
+
+function loadVisaApplicationFormData() {
+    setTimeout(function() {
+        $($('#visaApplicationFormDataContent').html()).appendTo($('#visaApplicationForm'));
+        $('#visaApplicationForm #signature').signature();
+    }, 1000)
 }

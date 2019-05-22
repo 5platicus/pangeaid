@@ -1,0 +1,162 @@
+<div id="visaApplicationFormDataContent">
+    <div id="visaApplicationFormData">
+        <div class="formSectionTitle">
+            <h4>3. Passport Details</h4>
+        </div>  
+        <label class="formLabel">
+            <h4>Passport Number</h4>
+        </label>
+        <input type="text" data-profile="passportNumber" />
+        <label class="formLabel">
+            <h4>Date Issued</h4>
+        </label>
+        <input type="date" data-profile="dateIssued" />
+        <label class="formLabel">
+            <h4>Place Issued</h4>
+        </label>
+        <input type="text" data-profile="placeIssued" />
+        <label class="formLabel">
+            <h4>Valid Until</h4>
+        </label>
+        <input type="date" data-profile="validUntil" />
+        <label class="formLabel">
+            <h4>Issuing Authority</h4>
+        </label>
+        <input type="text" data-profile="issuingAuthority" />
+
+        <div class="formSectionTitle">
+            <h4>4. Visit Details</h4>
+        </div>  
+
+        <label class="formLabel" style="text-align:center;">
+            <h4>Validity Period</h4>
+        </label>
+        <div class="formMultiSelect">
+            
+            <input type="radio" type="radio" name="validityPeriod" id="vp1" checked />
+            <label for="vp1">1 Week</label>
+            
+            <input type="radio" type="radio" name="validityPeriod" id="vp2" />
+            <label for="vp2">15 Days</label>
+            
+            <input type="radio" type="radio" name="validityPeriod" id="vp3" />
+            <label for="vp3">1 Month</label>
+            
+            <input type="radio" type="radio" name="validityPeriod" id="vp4" />
+            <label for="vp4">3 Months</label>
+        </div>
+
+        <label class="formLabel" style="text-align:center;">
+            <h4>Re-entry</h4>
+        </label>
+        <div class="formMultiSelect"> 
+            <input type="radio" type="radio" name="reEntry" id="rE1" checked />
+            <label for="rE1">Single</label>
+            
+            <input type="radio" type="radio" name="reEntry" id="rE2" />
+            <label for="rE2">Multiple</label>
+        </div>
+
+        <label class="formLabel" style="text-align:center;">
+            <h4>Single Traveler</h4>
+        </label>
+        <div class="formMultiSelect"> 
+            <input type="radio" type="radio" name="singleTraveler" id="sT1" checked />
+            <label for="sT1">Yes</label>
+
+            <input type="radio" type="radio" name="singleTraveler" id="sT2" />
+            <label for="sT2">No</label>
+        </div>
+        
+        <div class="formSectionTitle">
+            <h4>5. Visit Purpose: Tourism</h4>
+        </div>  
+        <label class="formLabel">
+            <h4>Applicant professional activity sector</h4>
+        </label>
+        <input type="text" />
+
+        <label class="formLabel">
+            <h4>Intended Destinations</h4>
+        </label>
+        <div class="formMultiLineInput">
+            <input style="flex:8" type="text" placeholder="Destination Name" />
+            <label class="formLabel">
+                <h4>Days</h4>
+            </label>
+            <input style="flex:1; margin-left:5px;" type="number" />
+        </div>
+        <div class="formMultiLineInput">
+            <input style="flex:8" type="text" placeholder="Destination Name" />
+            <label class="formLabel">
+                <h4>Days</h4>
+            </label>
+            <input style="flex:1; margin-left:5px;" type="number" />
+        </div>
+        <div class="formMultiLineInput">
+            <input style="flex:8" type="text" placeholder="Destination Name" />
+            <label class="formLabel">
+                <h4>Days</h4>
+            </label>
+            <input style="flex:1; margin-left:5px;" type="number" />
+        </div>
+        <div class="formMultiLineInput">
+            <input style="flex:8" type="text" placeholder="Destination Name" />
+            <label class="formLabel">
+                <h4>Days</h4>
+            </label>
+            <input style="flex:1; margin-left:5px;" type="number" />
+        </div>
+        <div class="formMultiLineInput">
+            <input style="flex:8" type="text" placeholder="Destination Name" />
+            <label class="formLabel">
+                <h4>Days</h4>
+            </label>
+            <input style="flex:1; margin-left:5px;" type="number" />
+        </div>
+
+        <div class="formSectionTitle">
+            <h4>6. Visit Purpose: Emigration</h4>
+        </div>
+        <label class="formLabel">
+            <h4>Activity sector in which employment is searched</h4>
+        </label>
+        <input type="text" />
+        <label class="formLabel">
+            <h4>Contact address</h4>
+        </label>
+        <input type="text" />
+
+        <div class="formSectionTitle">
+            <h4>7. Visit Purpose: Other than tourism or emigration</h4>
+        </div>
+        <label class="formLabel">
+            <h4>Intention description</h4>
+        </label>
+        <input type="text" />
+        <label class="formLabel">
+            <h4>Contact address</h4>
+        </label>
+        <input type="text" />
+        <label class="formLabel">
+            <h4>Permit reference number</h4>
+        </label>
+        <input type="text" />
+
+        <div class="formSectionTitle">
+            <h4>8. Confirmation & Signature</h4>
+        </div>
+        <label class="formLabel">
+            <h4>Full Name</h4>
+        </label>
+        <input type="text" />
+
+        <div class="signatureForm">
+            <label class="signature">
+                <h4>Signature</h4>
+            </label>
+            <div id="signature"></div>
+        </div>
+        <button id="prePaymentFormEmpty" href="#prePayment">Digitally Sign Form</button>
+    </div>
+</div>
