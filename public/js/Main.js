@@ -328,13 +328,13 @@ function loadTravelCategories() {
                     li.attr('class', 'visible');
                 }, 100)
             }
-        }, index * 150)
+        }, index * 50)
     })
 }
 
 function loadVisaApplicationFormData() {
     setTimeout(function() {
-        $($('#visaApplicationFormDataContent').html()).appendTo($('#visaApplicationForm'));
+        $($('#visaApplicationFormDataContent').html()).insertBefore($('#prePaymentFormEmpty'));
         $('#visaApplicationForm #signature').signature();
-    }, 1000)
+    }, 500)
 }
