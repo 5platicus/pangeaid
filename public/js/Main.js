@@ -3,7 +3,6 @@ let successAnimation = "<svg id='successAnimation' class='animated' xmlns='http:
 $(document).ready(function() {
     initializeModals();
     tabNavigation();
-    // $('#signature').signature();
     [].slice.call( document.querySelectorAll( '.progress-button' ) ).forEach( function( bttn, pos ) {
         new UIProgressButton( bttn, {
             callback : function( instance ) {
@@ -60,6 +59,8 @@ $(document).ready(function() {
                 let classList = $('#paymentValidationFormEmpty').data('classes').split(/\s+/);
                 closeClasses(classList)
             });
+        $('<div class="swal-success-container"></div>').insertAfter('.swal-text');
+        $('.swal-success-container').html(successAnimation);
     });
     // send money successfull - modal plus close on end
     $('#sendPaymentValidationFormEmpty').on('click', function() {
@@ -69,6 +70,8 @@ $(document).ready(function() {
                 let classList = $('#sendPaymentValidationFormEmpty').data('classes').split(/\s+/);
                 closeClasses(classList)
             });
+        $('<div class="swal-success-container"></div>').insertAfter('.swal-text');
+        $('.swal-success-container').html(successAnimation);
     });
     // send money successfull - modal plus close on end
     $('#payPaymentValidationFormEmpty').on('click', function() {
@@ -78,6 +81,8 @@ $(document).ready(function() {
                 let classList = $('#payPaymentValidationFormEmpty').data('classes').split(/\s+/);
                 closeClasses(classList)
             });
+        $('<div class="swal-success-container"></div>').insertAfter('.swal-text');
+        $('.swal-success-container').html(successAnimation);
     });
     // reseting authentication on back or close buttons
     $('.back-docsAuthentication').on('click', function() { resetIdentityValidation() })
