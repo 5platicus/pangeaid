@@ -99,13 +99,13 @@ $(document).ready(function() {
         $('#payRecipientInformation .generalForm input').each(function() {
             switch($(this).data('profile')) {
                 case 'amount':
-                    $('#sendAuthentication #totalAmountNumber').text('$' + $(this).val());
+                    $('#payAuthentication #totalAmountNumber').text('$' + $(this).val());
                     break;
                 case 'recipientName':
-                    $('#sendAuthentication #recipientName').text($(this).val());
+                    $('#payAuthentication #recipientName').text($(this).val());
                     break;
                 case 'recipientEmail':
-                    $('#sendAuthentication #recipientEmail').text($(this).val());
+                    $('#payAuthentication #recipientEmail').text($(this).val());
                     break;
             }
             if ($(this).val().length > 0 && valid) {
