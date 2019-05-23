@@ -15,6 +15,7 @@
     <script src="assets/vendor/sweetalert.min.js"></script>
     <script src="assets/vendor/classie.js"></script>
     <script src="assets/vendor/bounce.min.js"></script>
+    <script src="assets/vendor/jquery.mask.min.js"></script>
 </head>
 <body>
 
@@ -849,7 +850,7 @@
                 <label class="amount">
                     <h4>Amount</h4>
                 </label>
-                <input type="text" data-profile="amount" />
+                <input class="amountInput" type="text" pattern="\d*" data-profile="amount" />
                 <label class="recipientName">
                     <h4>Recipient name</h4>
                 </label>
@@ -865,7 +866,7 @@
                 <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
             </div>
             <br />
-            <div class="containerAction" id="sendAuthenticationFormEmpty" href="#sendAuthentication">
+            <div class="containerAction disabledAction" id="sendAuthenticationFormEmpty" href="#sendAuthentication">
                 <i class="fal fa-layer-plus"></i><h4>Next</h4>
             </div>
         </div>
@@ -893,13 +894,13 @@
         <div class="verticalFlexFilled validationContent">
             <div>
                 <h4>Recipient Name</h4>
-                <h3>Aina Rakotonirina</h3>
+                <h3 id="recipientName">Aina Rakotonirina</h3>
             </div>
             <div>
                 <h4>Recipient Email</h4>
-                <h3>aina.rakotonirina@gmail.com</h3>
+                <h3 id="recipientEmail">aina.rakotonirina@gmail.com</h3>
             </div>
-            <span class="totalAmount">Amount: <span class="totalAmountNumber">$12.43</span></span>
+            <span class="totalAmount">Amount: <span id="totalAmountNumber" class="totalAmountNumber">$12.43</span></span>
         </div>
 
         <div>
@@ -966,7 +967,7 @@
                 <label class="amount">
                     <h4>Amount</h4>
                 </label>
-                <input type="text" data-profile="amount" />
+                <input class="amountInput" type="text" pattern="\d*" data-profile="amount" />
                 <label class="recipientName">
                     <h4>Recipient name</h4>
                 </label>
@@ -982,7 +983,7 @@
                 <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
             </div>
             <br />
-            <div class="containerAction" id="payAuthenticationFormEmpty" href="#payAuthentication">
+            <div class="containerAction disabledAction" id="payAuthenticationFormEmpty" href="#payAuthentication">
                 <i class="fal fa-layer-plus"></i><h4>Next</h4>
             </div>
         </div>
@@ -1010,13 +1011,13 @@
         <div class="verticalFlexFilled validationContent">
             <div>
                 <h4>Recipient Name</h4>
-                <h3>Aina Rakotonirina</h3>
+                <h3 id="recipientName">Aina Rakotonirina</h3>
             </div>
             <div>
                 <h4>Recipient Email</h4>
-                <h3>aina.rakotonirina@gmail.com</h3>
+                <h3 id="recipientEmail">aina.rakotonirina@gmail.com</h3>
             </div>
-            <span class="totalAmount">Amount: <span class="totalAmountNumber">$12.43</span></span>
+            <span class="totalAmount">Amount: <span id="totalAmountNumber" class="totalAmountNumber">$12.43</span></span>
         </div>
 
         <div>

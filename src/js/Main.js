@@ -91,13 +91,69 @@ $(document).ready(function() {
     $('.back-payAuthentication').on('click', function() { resetIdentityValidation() })
     $('.back-sendRecipientInformation').on('click', function() { resetScanAndPay() })
     $('.back-payRecipientInformation').on('click', function() { resetScanAndPay() })
+
+    /* form validation */
+    $('#payRecipientInformation .generalForm .amountInput').mask('000.000.000.000.000,00', {reverse: true});
+    $("#payRecipientInformation .generalForm input").on('change paste keyup', function() {
+        let valid = true;
+        $('#payRecipientInformation .generalForm input').each(function() {
+            switch($(this).data('profile')) {
+                case 'amount':
+                    $('#sendAuthentication #totalAmountNumber').text('$' + $(this).val());
+                    break;
+                case 'recipientName':
+                    $('#sendAuthentication #recipientName').text($(this).val());
+                    break;
+                case 'recipientEmail':
+                    $('#sendAuthentication #recipientEmail').text($(this).val());
+                    break;
+            }
+            if ($(this).val().length > 0 && valid) {
+                valid = true;
+            } else {
+                valid = false;
+            }
+        })
+        if (valid) {
+            $('#payRecipientInformation #payAuthenticationFormEmpty').attr('class', 'containerAction enabledAction');
+        } else {
+            $('#payRecipientInformation #payAuthenticationFormEmpty').attr('class', 'containerAction disabledAction');
+        }
+    });
+    $('#sendRecipientInformation .generalForm .amountInput').mask('000.000.000.000.000,00', {reverse: true});
+    $("#sendRecipientInformation .generalForm input").on('change paste keyup', function() {
+        let valid = true;
+        $('#sendRecipientInformation .generalForm input').each(function() {
+            switch($(this).data('profile')) {
+                case 'amount':
+                    $('#sendAuthentication #totalAmountNumber').text('$' + $(this).val());
+                    break;
+                case 'recipientName':
+                    $('#sendAuthentication #recipientName').text($(this).val());
+                    break;
+                case 'recipientEmail':
+                    $('#sendAuthentication #recipientEmail').text($(this).val());
+                    break;
+            }
+            if ($(this).val().length > 0 && valid) {
+                valid = true;
+            } else {
+                valid = false;
+            }
+        })
+        if (valid) {
+            $('#sendRecipientInformation #sendAuthenticationFormEmpty').attr('class', 'containerAction enabledAction');
+        } else {
+            $('#sendRecipientInformation #sendAuthenticationFormEmpty').attr('class', 'containerAction disabledAction');
+        }
+    });
 });
 
 /**
  * MODAL ROUTES INITIALIZATION
 */
 let options = {
-    beforeClose: function beforeModalClose() {
+    beforeClose: function () {
         return swal({
             title: "Warning",
             text: "Closing this window will delete your progress. Are you sure that you would like to close it?",
@@ -114,10 +170,18 @@ function initializeModals() {
             loadTravelCategories();
         },
         afterClose: function() {
-            $('.traveInnerCategorySelect li').remove();
+            resetTravelCategories()
         },
+        beforeClose: function () {
+            return swal({
+                title: "Warning",
+                text: "Closing this window will delete your progress. Are you sure that you would like to close it?",
+                buttons: true,
+                dangerMode: true
+            });
+        }
     });
-    $("#visaApplicationFormEmpty").animatedModal(options);
+    $("#visaApplicationFormEmpty").animatedModal();
     $("#prePaymentFormEmpty").animatedModal(options);
 
     $("#docsFormEmpty").animatedModal();
@@ -232,6 +296,7 @@ function pasteScanAndPay(id) {
     $('#' + id + ' [data-profile="recipientEmail"]').val('aina.rakotonirina@gmail.com');
 }
 function resetScanAndPay() {
+    $('[data-profile="amount"]').val('');
     $('[data-profile="recipientName"]').val('');
     $('[data-profile="recipientEmail"]').val('');
 }
@@ -252,6 +317,8 @@ function resetScreens() {
     resetSignature();
     resetIdentityValidation();
     resetScanAndPay();
+    resetTravelCategories();
+    resetVisaAplication();
 }
 function resetProfile() {
     let variables = {
@@ -283,6 +350,15 @@ function resetIdentityValidation(){
     $('#payPaymentValidationFormEmpty').attr('class', 'containerAction disabledAction')
     $('#displayDocQREmptyForm').attr('class', 'containerAction disabledAction')
 };
+
+function resetTravelCategories() {
+    $('.traveInnerCategorySelect li').remove();
+}
+
+function resetVisaAplication() {
+    $('#visaApplication .modalContent').scrollTop(0);
+    $('#visaApplicationForm #visaApplicationFormData').remove();
+}
 
 function showAlertSuccess(title, text) {
     swal({
@@ -319,9 +395,16 @@ function loadTravelCategories() {
                         loadVisaApplicationFormData()
                     },
                     afterClose: function() {
-                        $('#visaApplication .modalContent').scrollTop(0);
-                        $('#visaApplicationForm #visaApplicationFormData').remove();
-                    }
+                        resetVisaAplication();
+                    },
+                    beforeClose: function () {
+                        return swal({
+                            title: "Warning",
+                            text: "Closing this window will delete your progress. Are you sure that you would like to close it?",
+                            buttons: true,
+                            dangerMode: true
+                        });
+                    },
                 }, options));
                 setTimeout(function() {
                     li.attr('class', 'visible');

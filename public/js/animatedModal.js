@@ -162,13 +162,11 @@ function closeClasses(classList, zIndexOut, afterClose) {
             if ($('#' + selector).hasClass(selector+'-on')) {
                 $('#' + selector).removeClass(selector+'-on');
                 $('#' + selector).addClass(selector+'-off');
-            } 
-
+            }
             if ($('#' + selector).hasClass(selector+'-off')) {
-                $('#' + selector).removeClass(selector);
-                $('#' + selector).addClass(selector);
+                $('#' + selector).removeClass('fadeInUpBig');
+                $('#' + selector).addClass('fadeOutDownBig');
                 $('#' + selector).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterClose);
-                $('#' + selector).css({'z-index':zIndexOut});
             };
         }
     });

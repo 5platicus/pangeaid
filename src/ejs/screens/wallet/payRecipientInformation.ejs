@@ -13,7 +13,7 @@
                 <label class="amount">
                     <h4>Amount</h4>
                 </label>
-                <input type="text" data-profile="amount" />
+                <input class="amountInput" type="text" pattern="\d*" data-profile="amount" />
                 <label class="recipientName">
                     <h4>Recipient name</h4>
                 </label>
@@ -29,7 +29,7 @@
                 <i class="fal fa-layer-plus"></i><h4>ScanQR Code</h4>
             </div>
             <br />
-            <div class="containerAction" id="payAuthenticationFormEmpty" href="#payAuthentication">
+            <div class="containerAction disabledAction" id="payAuthenticationFormEmpty" href="#payAuthentication">
                 <i class="fal fa-layer-plus"></i><h4>Next</h4>
             </div>
         </div>
