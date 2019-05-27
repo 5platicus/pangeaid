@@ -1,0 +1,56 @@
+<div id="residentCard" class="animatedModal residentCard">
+    <%- include('ejs/include/modalHeader.ejs', {
+        title: "Resident card",
+        subTitle: "Resident card",
+        identifier: "residentCard",
+        back: false,
+        closeClasses: "close-residentCard"
+    }) %>
+
+    <div>
+        <div class="docsContentWrapper noBg">
+            <div class="docsContent">
+                <img src="assets/images/exampleLicense.png" alt="">
+            </div>
+        </div>
+        <div class="validationContent">
+            <div>
+                <h4>Card No.</h4>
+                <h3 id="recipientName">001101114779</h3>
+            </div>
+            <div>
+                <h4>Visa Ref.</h4>
+                <h3 id="recipientEmail">17014DIE17</h3>
+            </div>
+            <div>
+                <h4>Last Name</h4>
+                <h3 id="recipientName">Rakotonirina</h3>
+            </div>
+            <div>
+                <h4>First Name</h4>
+                <h3 id="recipientEmail">Aina</h3>
+            </div>
+            <div>
+                <h4>Date of Birth</h4>
+                <h3 id="recipientName">13/05/1998</h3>
+            </div>
+            <div>
+                <h4>Nationality</h4>
+                <h3 id="recipientEmail">USA</h3>
+            </div>
+            <div>
+                <h4>Validity</h4>
+            <h3 id="recipientName">From 14/10/2016 to 14/10/2017</h3>
+            </div>
+            <div>
+                <h4> District</h4>
+                <h3 id="recipientEmail">Antananarivo</h3>
+            </div>
+        </div>
+    </div>
+    <div id="residentCardDone" class="containerAction enabledAction" data-classes="close-residentCard">
+        <i class="fal fa-money-bill-wave"></i><h4>Done</h4>
+    </div>
+
+    <% include ../../include/modalFooter.ejs %>
+</div>

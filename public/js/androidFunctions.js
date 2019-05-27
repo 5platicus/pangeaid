@@ -13,6 +13,8 @@ function fingerprint(sResult) {
             $('#payPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
         } else if (currentScreen === 'docsAuthentication') {
             $('#displayDocQREmptyForm').attr('class', 'containerAction enabledAction');
+        } else if (currentScreen === 'authMain') {
+            window.location = 'authMain.html';
         }
     } else {
         if (currentScreen === 'govPayment') {
@@ -28,8 +30,8 @@ function fingerprint(sResult) {
 }
 function p_fingerprint(current) {
     currentScreen = current;
-    window.location='p_fingerprint'
-    // fingerprint(true);
+    // window.location='p_fingerprint'
+    fingerprint(true);
 }
 
 /**
@@ -46,6 +48,8 @@ function facerecognition(sResult) {
             $('#payPaymentValidationFormEmpty').attr('class', 'containerAction enabledAction');
         } else if (currentScreen === 'docsAuthentication') {
             $('#displayDocQREmptyForm').attr('class', 'containerAction enabledAction');
+        } else if (currentScreen === 'authMain') {
+            window.location = 'authMain.html';
         }
     } else {
         if (currentScreen === 'govPayment') {
@@ -61,8 +65,8 @@ function facerecognition(sResult) {
 }
 function p_facerecognition(current) {
     currentScreen = current;
-    window.location='p_facerecognition'
-    // facerecognition(true);
+    // window.location='p_facerecognition'
+    facerecognition(true);
 }
 
 function addcard(sResult) {
@@ -85,18 +89,35 @@ function addcard(sResult) {
 }
 function p_addcard(current) {
     currentScreen = current;
-    window.location='p_addcard'
-    // addcard(true);
+    // window.location='p_addcard'
+    addcard(true);
 }
 
 
 function scanandpay(sResult) {
     if (sResult) {
-        pasteScanAndPay(currentScreen)
+        if (currentScreen === 'payRecipientInformation' || currentScreen === 'sendRecipientInformation') {
+            pasteScanAndPay(currentScreen)
+        } else if (currentScreen === 'authMain') {
+            $( "#residentCardFormEmpty").click();
+        }
     }
 }
 function p_scanandpay(current) {
     currentScreen = current;
-    window.location='p_scanandpay'
-    // scanandpay(true);
+    // window.location='p_scanandpay'
+    scanandpay(true);
+}
+
+function nfc(sResult) {
+    if (sResult) {
+        if (currentScreen === 'authMain') {
+            $( "#residentCardFormEmpty").click();
+        }
+    }
+}
+function p_nfc(current) {
+    currentScreen = current;
+    // window.location='p_scanandpay'
+    nfc(true);
 }
