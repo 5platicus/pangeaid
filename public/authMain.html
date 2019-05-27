@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Authority</title>
+</head>
+<body>
+
+<div class="masterWrapper">
+    <header class="header">
+        <ul>
+            <li>
+                <i id="screenIcon" class="fal fa-barcode-read"></i>
+            </li>
+            <li><h3 id="screenTitle">PangeaID</h3></li>
+            <li><a href="index.html"><img src="assets/images/Logo Icon.png" alt=""></a></li>
+        </ul>
+    </header>
+    
+    <span class="authTitle"><h3>Select authentication method</h3></span>
+    <ul class="AuthCategorySelect">
+        <li onclick="p_scanandpay('authMain')"><i class="fal fa-qrcode"></i><h3>Scan QR</h3></li>
+        <li onclick="p_nfc('authMain')"><i class="fal fa-wifi"></i><h3>NFC</h3></li>
+    </ul>
+    
+</div>
+
+</body>
+</html>
